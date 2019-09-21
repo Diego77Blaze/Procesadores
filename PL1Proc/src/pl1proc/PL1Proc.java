@@ -25,6 +25,14 @@ public class PL1Proc {
         
         System.out.println("Cuantos estados tiene la matriz? (Contando el inicial q0)");
         numEstados = Integer.parseInt(br.readLine());
+        String matriz[][] = new String[numEstados][numEstados];
+        
+        for(int i=0;i<numEstados-1;i++){
+            for(int j = 0;i<numEstados-1;j++){
+                System.out.println("Introduzca el estado de la columna " +j+ " y de la fila " + i);
+                matriz[i][j] = br.readLine();
+            }
+        }
     }
     
 }
