@@ -22,13 +22,17 @@ public class PL1Proc {
         // TODO code application logic here aaaaaaa
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int numEstados = 0;
+        int numCaracteres = 0;
         
-        System.out.println("Cuantos estados tiene la matriz? (Contando el inicial q0)");
+        System.out.println("Cuantos estados tiene el automata? (Contando el inicial q0)");
         numEstados = Integer.parseInt(br.readLine());
-        String matriz[][] = new String[numEstados][numEstados];
+        System.out.println("Cuantos caracteres tiene el alfabeto?");
+        numCaracteres = Integer.parseInt(br.readLine());
+        String matriz[][] = new String[numEstados][numCaracteres];
+        
         
         for(int i=0;i<numEstados-1;i++){
-            for(int j = 0;i<numEstados-1;j++){
+            for(int j = 0;i<numCaracteres-1;j++){
                 System.out.println("Introduzca el estado de la columna " +j+ " y de la fila " + i);
                 matriz[i][j] = br.readLine();
             }
