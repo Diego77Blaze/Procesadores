@@ -32,7 +32,7 @@ public class PL1Proc {
         
         
         for(int i=0;i<numEstados-1;i++){
-            for(int j = 0;i<numCaracteres-1;j++){
+            for(int j = 0;i<numCaracteres;j++){
                 System.out.println("Introduzca el estado de la columna " +j+ " y de la fila " + i);
                 matriz[i][j] = br.readLine();
             }
