@@ -39,8 +39,11 @@ public class ME {
         Inicializar();
         for (int i=0;i<s.length();i++){
             try{
+                
                 this.acepta(s.charAt(i));
-                if (this.isFinal()) return true; //HACERLO SÓLO PARA EL FINAL DE TODOS
+                if (i == s.length()-1){
+                    if (this.isFinal()) return true; //HACERLO SÓLO PARA EL FINAL DE TODOS
+                } 
             } catch (Exception e){};
         }
         return false;
