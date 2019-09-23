@@ -14,8 +14,15 @@ public class ME {
     /**
      * @param args the command line arguments
      */
+    Integer estadoActual = 0;
+    AFD automata = new AFD();
+    
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+    
+    public void Inicializar(){
+        estadoActual = automata.getEstadoInicial();
     }
     
 }
