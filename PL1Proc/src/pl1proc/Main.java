@@ -17,16 +17,16 @@ public class Main {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("¿Cuantas cadenas desea comprobar?");
-        Integer contadorCadenas = Integer.parseInt(br.readLine());
         ME maquinaEstados = new ME();
         
         
-        boolean resultado = maquinaEstados.compruebaCadena("abcdedede");
-        if (resultado) System.out.println("La cadena es valida para esta expresion regular");
+        boolean resultado1 = maquinaEstados.compruebaCadena("abcdedede");
+        if (resultado1) System.out.println("La cadena es valida para esta expresion regular");
         else System.out.println("La cadena no es valida para esta expresion regular");
         
     }
