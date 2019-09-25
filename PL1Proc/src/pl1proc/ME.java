@@ -54,13 +54,12 @@ public class ME {
             
             try{
                 
-                if(!acepta(s.charAt(i)));{
+                if(!acepta(s.charAt(i))){
                     throw new Exception("Error");
-                }
-                else{
-                        if (i == s.length()-1){
-                            if (this.isFinal()) result = true; //HACERLO SÓLO PARA EL FINAL DE TODOS
-                        }
+                }else{
+                    if (i == s.length()-1){
+                        if (this.isFinal()) result = true; //HACERLO SÓLO PARA EL FINAL DE TODOS
+                    }
                 }
                 
             } catch (Exception e){}

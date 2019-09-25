@@ -91,6 +91,7 @@ public class AFD {
     public void cargarMatriz(){
         matriz.get(0).put('a', 1);
         matriz.get(0).put('b', 2);
+        matriz.get(1).put('b', 2);
         matriz.get(2).put('c', 3);
         matriz.get(3).put('d', 4);
         matriz.get(4).put('e', 5);
