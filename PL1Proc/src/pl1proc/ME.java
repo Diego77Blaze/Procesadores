@@ -58,7 +58,7 @@ public class ME {
                     throw new Exception("Error");
                 }else{
                     if (i == s.length()-1){
-                        if (this.isFinal()) result = true; //HACERLO SÓLO PARA EL FINAL DE TODOS
+                        if (this.isFinal()) result = true;
                     }
                 }
                 
