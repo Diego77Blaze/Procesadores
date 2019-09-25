@@ -15,16 +15,32 @@ public class ME {
      * @param args the command line arguments
      */
     Integer estadoActual = 0;
-    AFD automata = new AFD();
+    AFD automata;
     
-    public void Inicializar(){
+    public ME(){
+        automata = new AFD();
+        automata.cargarAlfabeto();
+        automata.cargarEstados();
+        automata.establecerQi(0);
+        automata.establecerQf();
+        automata.inicializacionMatriz();
+        automata.cargarMatriz();
+    }
+    
+    public void inicializar(){
         estadoActual = automata.getEstadoInicial();
     }
     
-    public void acepta(Character caracter) throws Exception{
+    public boolean acepta(Character caracter) throws Exception{
         Integer estadotmp = automata.getSiguienteEstado(estadoActual, caracter);
-        if (estadotmp!=null) estadoActual = estadotmp;
-        else throw new Exception("Algo malo ha pasado.");
+        boolean verificar;
+        if (estadotmp!=null){
+            estadoActual = estadotmp;
+            verificar = true;
+        }
+        else throw new Exception("No existe un estado mas.");
+        
+        return verificar;
     }
     
     public boolean isFinal(){
@@ -32,17 +48,26 @@ public class ME {
     }
     
     public boolean compruebaCadena(String s){
-        Inicializar();
+        boolean result = false;
+        inicializar();
         for (int i=0;i<s.length();i++){
+            
             try{
                 
-                this.acepta(s.charAt(i));
-                if (i == s.length()-1){
-                    if (this.isFinal()) return true; //HACERLO SÓLO PARA EL FINAL DE TODOS
-                } 
+                if(!acepta(s.charAt(i)));{
+                    throw new Exception("Error");
+                }
+                else{
+                        if (i == s.length()-1){
+                            if (this.isFinal()) result = true; //HACERLO SÓLO PARA EL FINAL DE TODOS
+                        }
+                }
+                
             } catch (Exception e){}
         }
-        return false;
+        return result;
     }
     
 }
+
+//Te puede pedir para un numero maximo de caracteres o para unas cifras limitadas

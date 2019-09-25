@@ -5,6 +5,7 @@
  */
 package pl1proc;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,8 +20,11 @@ public class AFD {
     List<Integer> estadosFinales;
     HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
     
-   
-    
+   public AFD(){
+       this.alfabeto = new ArrayList<>();
+       this.estados = new ArrayList<>();
+       this.estadosFinales = new ArrayList<>();
+   }
     
     public void cargarAlfabeto(){
         alfabeto.add('a');
@@ -64,7 +68,7 @@ public class AFD {
     }
     
     public void cargarEstados(){
-        for (int i=0;i<18;i++){
+        for (int i=0;i<6;i++){
             estados.add(i);
         }
     }
@@ -74,7 +78,8 @@ public class AFD {
     }
     
     public void establecerQf(){
-        estadosFinales.add(5); //ejemplo, hacen falta más
+        estadosFinales.add(3);
+        estadosFinales.add(5);//ejemplo, hacen falta más
     }
     
     public void inicializacionMatriz(){
@@ -84,7 +89,12 @@ public class AFD {
     }
     
     public void cargarMatriz(){
-        matriz.get(0).put('a', 3); //ejemplo, hacen falta más
+        matriz.get(0).put('a', 1);
+        matriz.get(0).put('b', 2);
+        matriz.get(2).put('c', 3);
+        matriz.get(3).put('d', 4);
+        matriz.get(4).put('e', 5);
+        matriz.get(5).put('d', 4);
     }
     
     public Integer getSiguienteEstado(Integer estado,Character caracter){
