@@ -28,6 +28,39 @@ public class AFD {
         alfabeto.add('c');
         alfabeto.add('d');
         alfabeto.add('e');
+        alfabeto.add('f');
+        alfabeto.add('g');
+        alfabeto.add('h');
+        alfabeto.add('i');
+        alfabeto.add('j');
+        alfabeto.add('k');
+        alfabeto.add('l');
+        alfabeto.add('m');
+        alfabeto.add('n');
+        alfabeto.add('ñ');
+        alfabeto.add('o');
+        alfabeto.add('p');
+        alfabeto.add('q');
+        alfabeto.add('r');
+        alfabeto.add('s');
+        alfabeto.add('t');
+        alfabeto.add('u');
+        alfabeto.add('v');
+        alfabeto.add('w');
+        alfabeto.add('x');
+        alfabeto.add('y');
+        alfabeto.add('z');
+        alfabeto.add('0');
+        alfabeto.add('1');
+        alfabeto.add('2');
+        alfabeto.add('3');
+        alfabeto.add('4');
+        alfabeto.add('5');
+        alfabeto.add('6');
+        alfabeto.add('7');
+        alfabeto.add('8');
+        alfabeto.add('9');
+        alfabeto.add(' ');
     }
     
     public void cargarEstados(){
@@ -40,7 +73,7 @@ public class AFD {
         estadoInicial = est;
     }
     
-    public void establecerQf(List<Integer> ests){
+    public void establecerQf(){
         estadosFinales.add(5); //ejemplo, hacen falta más
     }
     
