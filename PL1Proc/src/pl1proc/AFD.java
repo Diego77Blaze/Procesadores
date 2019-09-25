@@ -19,14 +19,7 @@ public class AFD {
     List<Integer> estadosFinales;
     HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
     
-    /*public AFD(List<Character> alfabeto,List<Integer> estados,Integer estadoInicial, List<Integer> estadosFinales, HashMap<Integer,HashMap<Character,Integer>> matriz)
-    {
-        
-    }
-
-    public AFD() {
-    }
-    */
+   
     
     
     public void cargarAlfabeto(){

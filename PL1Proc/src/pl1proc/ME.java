@@ -17,10 +17,6 @@ public class ME {
     Integer estadoActual = 0;
     AFD automata = new AFD();
     
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
     public void Inicializar(){
         estadoActual = automata.getEstadoInicial();
     }
@@ -44,7 +40,7 @@ public class ME {
                 if (i == s.length()-1){
                     if (this.isFinal()) return true; //HACERLO SÓLO PARA EL FINAL DE TODOS
                 } 
-            } catch (Exception e){};
+            } catch (Exception e){}
         }
         return false;
     }
