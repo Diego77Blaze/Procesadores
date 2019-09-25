@@ -24,9 +24,9 @@ public class Main {
         ME maquinaEstados = new ME();
         
         
-        boolean resultado = maquinaEstados.compruebaCadena("abcdedede");
-        if (resultado) System.out.println("La cadena es valida para esta expresion regular");
-        else System.out.println("La cadena no es valida para esta expresion regular");
+        boolean resultado = maquinaEstados.compruebaCadena("abcdede");
+        if (resultado) System.out.println("La cadena SI es valida para esta expresion regular");
+        else System.out.println("La cadena NO es valida para esta expresion regular");
         
     }
     
