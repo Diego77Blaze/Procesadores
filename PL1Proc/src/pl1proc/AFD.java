@@ -22,7 +22,7 @@ public class AFD {
     private Integer estadoInicial = 0;
     private List<Integer> estadosFinales;
     private HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
-    private ArrayList<Character> caracter=new ArrayList<>();
+    private ArrayList<Character> caracteresUsados=new ArrayList<>();
     
    public AFD(){
        this.alfabeto = new ArrayList<>();
@@ -122,9 +122,13 @@ public class AFD {
         }
         Iterator<Character> iterador = hashSet.iterator();
         while(iterador.hasNext()){
-            caracter.add(iterador.next());
+            caracteresUsados.add(iterador.next());
         }
-            System.out.println(caracter);
+            System.out.println(caracteresUsados);
+    }
+    
+    public ArrayList<Character> getCaracteresUsados(){
+        return caracteresUsados;
     }
     
     
