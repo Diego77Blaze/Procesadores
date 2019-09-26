@@ -6,7 +6,6 @@
 package pl1proc;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -20,7 +19,7 @@ public class Main {
      * @param args the command line arguments
      * 
      */
-    public static void main(String[] args) throws IOException, Exception {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ME maquinaEstados = new ME();
         ArrayList<String> cadenas = new ArrayList<>();

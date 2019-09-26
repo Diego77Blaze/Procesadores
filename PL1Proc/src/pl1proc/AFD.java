@@ -116,11 +116,11 @@ public class AFD {
     
     public void setCaracteresUsados(){
          
-        Collection<Character> hash_Set = new HashSet<Character>();
+        Collection<Character> hashSet = new HashSet<>();
         for (int i = 0;i<estados.size();i++){
-            hash_Set.addAll(matriz.get(i).keySet());           
+            hashSet.addAll(matriz.get(i).keySet());           
         }
-        Iterator<Character> iterador = hash_Set.iterator();
+        Iterator<Character> iterador = hashSet.iterator();
         while(iterador.hasNext()){
             caracter.add(iterador.next());
         }
