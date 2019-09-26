@@ -6,7 +6,10 @@
 package pl1proc;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -14,11 +17,12 @@ import java.util.List;
  * @author diego
  */
 public class AFD {
-    List<Character> alfabeto;
-    List<Integer> estados;
-    Integer estadoInicial = 0;
-    List<Integer> estadosFinales;
-    HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
+    private List<Character> alfabeto;
+    private List<Integer> estados;
+    private Integer estadoInicial = 0;
+    private List<Integer> estadosFinales;
+    private HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
+    private ArrayList<Character> caracter=new ArrayList<>();
     
    public AFD(){
        this.alfabeto = new ArrayList<>();
@@ -108,6 +112,19 @@ public class AFD {
     
     public Integer getEstadoInicial(){
         return estadoInicial;
+    }
+    
+    public void setCaracteresUsados(){
+         
+        Collection<Character> hash_Set = new HashSet<Character>();
+        for (int i = 0;i<estados.size();i++){
+            hash_Set.addAll(matriz.get(i).keySet());           
+        }
+        Iterator<Character> iterador = hash_Set.iterator();
+        while(iterador.hasNext()){
+            caracter.add(iterador.next());
+        }
+            System.out.println(caracter);
     }
     
     

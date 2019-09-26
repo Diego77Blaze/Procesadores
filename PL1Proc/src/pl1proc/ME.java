@@ -14,8 +14,8 @@ public class ME {
     /**
      * @param args the command line arguments
      */
-    Integer estadoActual = 0;
-    AFD automata;
+    private Integer estadoActual = 0;
+    private AFD automata;
     
     public ME(){
         automata = new AFD();
