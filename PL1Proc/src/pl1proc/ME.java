@@ -5,6 +5,8 @@
  */
 package pl1proc;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author diego
@@ -25,6 +27,7 @@ public class ME {
         automata.establecerQf();
         automata.inicializacionMatriz();
         automata.cargarMatriz();
+        automata.setCaracteresUsados();
     }
     
     public void inicializar(){
@@ -34,11 +37,15 @@ public class ME {
     public boolean acepta(Character caracter) throws Exception{
         Integer estadotmp = automata.getSiguienteEstado(estadoActual, caracter);
         boolean verificar;
+        if(estadotmp==-1){
+            verificar = false;
+            return verificar;
+        }
         if (estadotmp!=null){
             estadoActual = estadotmp;
             verificar = true;
         }
-        else throw new Exception("No existe un estado mas.");
+        else throw new Exception("No existe un estado más.");
         
         return verificar;
     }
@@ -65,6 +72,36 @@ public class ME {
             } catch (Exception e){}
         }
         return result;
+    }
+    
+public ArrayList formarCadenas() {
+        String cadenatmp="",cadenafinal="";
+        ArrayList<String> soluciones=new ArrayList<>();
+        int i,j;
+        inicializar();
+        try {
+            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
+                if(soluciones.size()!=5){
+                for(j=0;j<automata.getCaracteresUsados().size();j++){
+                    if(i>j){
+                    	if(automata.getCaracteresUsados().get(j)!=null){
+                            if(acepta(automata.getCaracteresUsados().get(j))){                    
+                                i=j;
+                                cadenatmp=cadenatmp + automata.getCaracteresUsados().get(i).toString();
+                            }
+                    	}
+                    }
+                }
+                if(acepta(automata.getCaracteresUsados().get(i))){
+                    cadenatmp=cadenatmp + automata.getCaracteresUsados().get(i).toString();
+                    //if(checkString(cadenatmp)){cadenafinal=cadenatmp;}
+                }
+                if (compruebaCadena(cadenatmp)){
+                    soluciones.add(cadenatmp);}
+                }
+            }
+        } catch (Exception ex){}
+        return soluciones;
     }
     
 }

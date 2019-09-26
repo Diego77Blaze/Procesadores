@@ -43,12 +43,15 @@ public class Main {
                 eleccion = Integer.parseInt(br.readLine());
             }
             else if(eleccion==2){
-                Integer limResultados;
+                
+                /*Integer limResultados;
                 Integer limCaracteres;
                 System.out.println("Introduce el limite de resultados:");
                 limResultados = Integer.parseInt(br.readLine());
                 System.out.println("Introduce el limite de caracteres:");
                 limCaracteres = Integer.parseInt(br.readLine());
+                */
+                System.out.println(maquinaEstados.formarCadenas());
                 
                 
                 

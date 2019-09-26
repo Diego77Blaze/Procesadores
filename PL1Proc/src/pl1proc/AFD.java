@@ -103,7 +103,10 @@ public class AFD {
     }
     
     public Integer getSiguienteEstado(Integer estado,Character caracter){
-        return matriz.get(estado).get(caracter);
+        if(matriz.get(estado).get(caracter)!=null){
+            return matriz.get(estado).get(caracter);
+        }
+        else return -1;
     }
     
     public boolean isFinal(Integer estado){
@@ -115,7 +118,6 @@ public class AFD {
     }
     
     public void setCaracteresUsados(){
-         
         Collection<Character> hashSet = new HashSet<>();
         for (int i = 0;i<estados.size();i++){
             hashSet.addAll(matriz.get(i).keySet());           
@@ -124,7 +126,6 @@ public class AFD {
         while(iterador.hasNext()){
             caracteresUsados.add(iterador.next());
         }
-            System.out.println(caracteresUsados);
     }
     
     public ArrayList<Character> getCaracteresUsados(){
