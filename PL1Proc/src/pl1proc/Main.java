@@ -51,7 +51,11 @@ public class Main {
                 System.out.println("Introduce el limite de caracteres:");
                 limCaracteres = Integer.parseInt(br.readLine());
                 */
-                System.out.println(maquinaEstados.formarCadenas());
+                int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
+                for(int i = 0; i<initialSize;i++){
+                    System.out.println(maquinaEstados.formarCadenas());
+                }
+                
                 
                 
                 
