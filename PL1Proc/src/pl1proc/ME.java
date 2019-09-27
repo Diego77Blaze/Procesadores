@@ -18,6 +18,7 @@ public class ME {
      */
     private Integer estadoActual = 0;
     private AFD automata;
+    private ArrayList<String> listaFinal = new ArrayList<>();
     
     public ME(){
         automata = new AFD();
@@ -94,11 +95,14 @@ public ArrayList formarCadenas() {
                     }
                     if(acepta(automata.getCaracteresUsados().get(i))){
                         cadenatmp=cadenatmp + automata.getCaracteresUsados().get(i).toString();
-                        //if(checkString(cadenatmp)){cadenafinal=cadenatmp;}
+                        
                     }
                     if (compruebaCadena(cadenatmp)){
                         if(!soluciones.contains(cadenatmp)){
                             soluciones.add(cadenatmp);
+                            if(!listaFinal.contains(cadenatmp)){
+                                listaFinal.add(cadenatmp);
+                            }
                         }
                 }
                 }
@@ -107,7 +111,11 @@ public ArrayList formarCadenas() {
             automata.getCaracteresUsados().remove(0);
             
         } catch (Exception ex){}
-        return soluciones;
+        return listaFinal;
+    }
+
+    public ArrayList<String> getListaFinal() {
+        return listaFinal;
     }
 
     public AFD getAutomata() {

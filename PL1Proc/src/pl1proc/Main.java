@@ -53,8 +53,9 @@ public class Main {
                 */
                 int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
                 for(int i = 0; i<initialSize;i++){
-                    System.out.println(maquinaEstados.formarCadenas());
+                    maquinaEstados.formarCadenas();
                 }
+                System.out.println(maquinaEstados.getListaFinal());
                 
                 
                 
