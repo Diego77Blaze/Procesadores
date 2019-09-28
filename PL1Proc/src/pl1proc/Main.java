@@ -32,7 +32,6 @@ public class Main {
             cadenas.add(br.readLine());
         }
         
-        
         //Ejercicio 2
         int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
                 for(int i = 0; i<initialSize;i++){
