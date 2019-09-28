@@ -208,12 +208,21 @@ public ArrayList formarCadenasCaracteres() {
 
 
 
-    public void getListaFinal() {
+    public void resultadoEjercicio(ArrayList<String> cadenas) {
+        
        File f;
        f = new File("ResultadosPL1.txt");
        try{
             BufferedWriter outputWriter;
             outputWriter = new BufferedWriter(new FileWriter(f));
+            
+            for (int i = 0; i<cadenas.size();i++){
+            boolean resultado = compruebaCadena(cadenas.get(i));
+            if (resultado) outputWriter.write("\""+cadenas.get(i)+"\" -->" + "Válida");
+            else outputWriter.write("\""+cadenas.get(i)+"\" -->" + "No Válida");
+            outputWriter.newLine();
+        }
+            
             for(int i = 0;i<listaFinal.size();i++){
                 outputWriter.write(i+"- \""+listaFinal.get(i)+"\"");
                 outputWriter.newLine();
