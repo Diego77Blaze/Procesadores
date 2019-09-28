@@ -6,6 +6,7 @@
 package pl1proc;
 
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  *
@@ -207,10 +208,23 @@ public ArrayList formarCadenasCaracteres() {
 
 
 
-    public ArrayList<String> getListaFinal() {
-        return listaFinal;
+    public void getListaFinal() {
+       File f;
+       f = new File("ResultadosPL1.txt");
+       try{
+            BufferedWriter outputWriter;
+            outputWriter = new BufferedWriter(new FileWriter(f));
+            for(int i = 0;i<listaFinal.size();i++){
+                outputWriter.write(i+"- \""+listaFinal.get(i)+"\"");
+                outputWriter.newLine();
+            }
+            System.out.println(listaFinal);
+            outputWriter.close();
+       }catch(IOException e){}
     }
 
+    
+    
     public AFD getAutomata() {
         return automata;
     }

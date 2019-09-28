@@ -43,16 +43,13 @@ public class Main {
                 eleccion = Integer.parseInt(br.readLine());
             }
             else if(eleccion==2){
-                
-                //Limitación por Caracteres
                 int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
                 for(int i = 0; i<initialSize;i++){
                     maquinaEstados.formarCadenasCaracteres();
+                    maquinaEstados.formarCadenasResultados();
+                    maquinaEstados.formarCadenasCyR();
                 }
-                System.out.println(maquinaEstados.getListaFinal());
-                
-                
-                
+                maquinaEstados.getListaFinal();
                 
                System.out.println("\nElija una opción:\n0)Salir\n1)Probar cadena segun una expresion regular\n2)Dar todas las posibles cadenas de texto de entradas válidas");
                eleccion = Integer.parseInt(br.readLine()); 
