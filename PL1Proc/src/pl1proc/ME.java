@@ -75,36 +75,36 @@ public class ME {
         return result;
     }
     
-public ArrayList formarCadenas() {
-        String cadenatmp="",cadenafinal="";
+public ArrayList formarCadenasResultados() {
+        String cadena="";
         ArrayList<String> soluciones=new ArrayList<>();
         int i,j;
         inicializar();
         try {
             for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
-                if(soluciones.size()!=5){
+                if(listaFinal.size()<5){
                     for(j=0;j<automata.getCaracteresUsados().size();j++){
                         if(i>j){
                             if(automata.getCaracteresUsados().get(j)!=null){
                                 if(acepta(automata.getCaracteresUsados().get(j))){                    
                                     i=j;
-                                    cadenatmp=cadenatmp + automata.getCaracteresUsados().get(i).toString();
+                                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
                                 }
                             }
                         }
                     }
                     if(acepta(automata.getCaracteresUsados().get(i))){
-                        cadenatmp=cadenatmp + automata.getCaracteresUsados().get(i).toString();
+                        cadena=cadena + automata.getCaracteresUsados().get(i).toString();
                         
                     }
-                    if (compruebaCadena(cadenatmp)){
-                        if(!soluciones.contains(cadenatmp)){
-                            soluciones.add(cadenatmp);
-                            if(!listaFinal.contains(cadenatmp)){
-                                listaFinal.add(cadenatmp);
+                    if (compruebaCadena(cadena)){
+                        if(!soluciones.contains(cadena)){
+                            soluciones.add(cadena);
+                            if(!listaFinal.contains(cadena)){
+                                listaFinal.add(cadena);
                             }
                         }
-                }
+                    }
                 }
             }
             automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
@@ -113,6 +113,99 @@ public ArrayList formarCadenas() {
         } catch (Exception ex){}
         return listaFinal;
     }
+public ArrayList formarCadenasCyR() {
+        String cadena="";
+        ArrayList<String> soluciones=new ArrayList<>();
+        int i,j;
+        inicializar();
+        try {
+            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
+                if(listaFinal.size()<5){
+                    for(j=0;j<automata.getCaracteresUsados().size();j++){
+                        if(i>j){
+                            if(automata.getCaracteresUsados().get(j)!=null){
+                                if(acepta(automata.getCaracteresUsados().get(j))){                    
+                                    i=j;
+                                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
+                                }
+                            }
+                        }
+                    }
+                    if(acepta(automata.getCaracteresUsados().get(i))){
+                        cadena=cadena + automata.getCaracteresUsados().get(i).toString();
+                        
+                    }
+                    if (compruebaCadena(cadena)){
+                        if(cadena.length()<=3){
+                            if(!soluciones.contains(cadena)){
+                                soluciones.add(cadena);
+                                if(!listaFinal.contains(cadena)){
+                                    listaFinal.add(cadena);
+                                }
+                            }
+                        }
+                        else{
+                            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
+                            automata.getCaracteresUsados().remove(0);
+                            return listaFinal;
+                        }
+                    }
+                }
+            }
+            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
+            automata.getCaracteresUsados().remove(0);
+            
+        } catch (Exception ex){}
+        return listaFinal;
+    }
+
+public ArrayList formarCadenasCaracteres() {
+        String cadena="";
+        ArrayList<String> soluciones=new ArrayList<>();
+        int i,j;
+        inicializar();
+        try {
+            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
+                    for(j=0;j<automata.getCaracteresUsados().size();j++){
+                        if(i>j){
+                            if(automata.getCaracteresUsados().get(j)!=null){
+                                if(acepta(automata.getCaracteresUsados().get(j))){                    
+                                    i=j;
+                                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
+                                }
+                            }
+                        }
+                    }
+                    if(acepta(automata.getCaracteresUsados().get(i))){
+                        cadena=cadena + automata.getCaracteresUsados().get(i).toString();
+                        
+                    }
+                    if (compruebaCadena(cadena)){
+                        if(cadena.length()<=6){
+                            if(!soluciones.contains(cadena)){
+                                soluciones.add(cadena);
+                                if(!listaFinal.contains(cadena)){
+                                    listaFinal.add(cadena);
+                                }
+                            }
+                        }
+                        else{
+                            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
+                            automata.getCaracteresUsados().remove(0);
+                            return listaFinal;
+                        }
+                        
+                    }
+                
+            }
+            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
+            automata.getCaracteresUsados().remove(0);
+            
+        } catch (Exception ex){}
+        return listaFinal;
+    }
+
+
 
     public ArrayList<String> getListaFinal() {
         return listaFinal;

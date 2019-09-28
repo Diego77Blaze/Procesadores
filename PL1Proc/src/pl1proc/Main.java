@@ -44,16 +44,10 @@ public class Main {
             }
             else if(eleccion==2){
                 
-                /*Integer limResultados;
-                Integer limCaracteres;
-                System.out.println("Introduce el limite de resultados:");
-                limResultados = Integer.parseInt(br.readLine());
-                System.out.println("Introduce el limite de caracteres:");
-                limCaracteres = Integer.parseInt(br.readLine());
-                */
+                //Limitación por Caracteres
                 int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
                 for(int i = 0; i<initialSize;i++){
-                    maquinaEstados.formarCadenas();
+                    maquinaEstados.formarCadenasCaracteres();
                 }
                 System.out.println(maquinaEstados.getListaFinal());
                 
