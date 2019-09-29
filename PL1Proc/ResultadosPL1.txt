@@ -1,6 +1,6 @@
 "abcde" -->Válida
-"bcdededededede" -->Válida
-"bce" -->Válida
+"aaaaabcde" -->No Válida
+"asdasjd" -->No Válida
 0- "a"
 1- "ab"
 2- "abc"

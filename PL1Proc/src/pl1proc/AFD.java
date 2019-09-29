@@ -100,9 +100,9 @@ public class AFD {
      * Método para inicializar la matriz
      */
     public void inicializacionMatriz(){
-        estados.stream().forEach((estado) -> {
-            matriz.put(estado, new HashMap<>());
-        });
+        for(int i = 0; i<estados.size();i++){
+            matriz.put(estados.get(i), new HashMap<>());
+        }
     }
     /**
      * Método para cargar los datos de la matriz 
