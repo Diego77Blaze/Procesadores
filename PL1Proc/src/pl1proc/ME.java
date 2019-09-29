@@ -61,25 +61,28 @@ public class ME {
     public boolean isFinal(){
         return automata.isFinal(estadoActual);
     }
+    
     /**
      * Comprobación de una cadena según una expresión regular
      * @param s cadena a probar en la ER
      * @return si la cadena es válida o no
      */
     public boolean compruebaCadena(String s){
-        boolean result = false;
         inicializar();
-        for (int i=0;i<s.length();i++){
-            try{
-                if(!this.acepta(s.charAt(i))){
-                    result = false;
+        try {
+            for (int i = 0; i < s.length(); i++) {
+
+                if (!this.acepta(s.charAt(i))) {
+                    return false;
                 }
-            } catch (Exception e){}
-            if (i == s.length()-1){
-                    if (this.isFinal()) result = true;
             }
+            if (this.isFinal()) {
+                return true;
+            }
+        } catch (Exception e) {
+            return false;
         }
-        return result;
+        return false;
     }
     /**
      * Formar Cadenas con límite de resultados
