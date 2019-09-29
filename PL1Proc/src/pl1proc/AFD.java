@@ -23,13 +23,17 @@ public class AFD {
     private List<Integer> estadosFinales;
     private HashMap<Integer,HashMap<Character,Integer>> matriz = new HashMap<>();
     private ArrayList<Character> caracteresUsados=new ArrayList<>();
-    
-   public AFD(){
+    /**
+     * Constructor de la Matriz de Estados
+     */
+    public AFD(){
        this.alfabeto = new ArrayList<>();
        this.estados = new ArrayList<>();
        this.estadosFinales = new ArrayList<>();
-   }
-    
+    }
+    /**
+     * Método para cargar alfabeto
+     */
     public void cargarAlfabeto(){
         alfabeto.add('a');
         alfabeto.add('b');
@@ -70,28 +74,39 @@ public class AFD {
         alfabeto.add('9');
         alfabeto.add(' ');
     }
-    
+    /**
+     * Método para cargar los estados posibles
+     */
     public void cargarEstados(){
         for (int i=0;i<6;i++){
             estados.add(i);
         }
     }
-    
+    /**
+     * Método para establecer los estados iniciales
+     * @param est estado inicial
+     */
     public void establecerQi(Integer est){
         estadoInicial = est;
     }
-    
+    /**
+     * Método para establecer los estados finales
+     */
     public void establecerQf(){
         estadosFinales.add(3);
-        estadosFinales.add(5);//ejemplo, hacen falta más
+        estadosFinales.add(5);
     }
-    
+    /**
+     * Método para inicializar la matriz
+     */
     public void inicializacionMatriz(){
-        for(int i = 0; i<estados.size();i++){
-            matriz.put(estados.get(i), new HashMap<Character, Integer>());
-        }
+        estados.stream().forEach((estado) -> {
+            matriz.put(estado, new HashMap<>());
+        });
     }
-    
+    /**
+     * Método para cargar los datos de la matriz 
+     */
     public void cargarMatriz(){
         matriz.get(0).put('a', 1);
         matriz.get(0).put('b', 2);
@@ -101,22 +116,36 @@ public class AFD {
         matriz.get(4).put('e', 5);
         matriz.get(5).put('d', 4);
     }
-    
+    /**
+     * Método para conseguir el estado que va a continuación del actual
+     * @param estado estado actual
+     * @param caracter caracter que nos dará el estado de salto
+     * @return 
+     */
     public Integer getSiguienteEstado(Integer estado,Character caracter){
         if(matriz.get(estado).get(caracter)!=null){
             return matriz.get(estado).get(caracter);
         }
         else return -1;
     }
-    
+    /**
+     * Método para ver si un estado es final
+     * @param estado estado a comprobar
+     * @return 
+     */
     public boolean isFinal(Integer estado){
         return estadosFinales.contains(estado);
     }
-    
+    /**
+     * Método para conseguir el estado inicial
+     * @return 
+     */
     public Integer getEstadoInicial(){
         return estadoInicial;
     }
-    
+    /**
+     * Método para conseguir los caracteres del alfabeto que se pueden usar según la ER
+     */
     public void setCaracteresUsados(){
         Collection<Character> hashSet = new HashSet<>();
         for (int i = 0;i<estados.size();i++){
@@ -127,7 +156,10 @@ public class AFD {
             caracteresUsados.add(iterador.next());
         }
     }
-    
+    /**
+     * Método para conseguir una lista de los caracteres usados
+     * @return la lista de caracteres usados
+     */
     public ArrayList<Character> getCaracteresUsados(){
         return caracteresUsados;
     }
