@@ -33,12 +33,10 @@ public class Main {
         }
         
         //Ejercicio 2
-        int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
-        for(int i = 0; i<initialSize;i++){
-            maquinaEstados.formarCadenasCaracteres();
-            //maquinaEstados.formarCadenasResultados();
-            //maquinaEstados.formarCadenasCyR();
-        }
+        
+        
+        maquinaEstados.formarCadenasCyR();
+        
         maquinaEstados.resultadoEjercicio(cadenas);
             
             

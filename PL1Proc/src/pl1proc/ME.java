@@ -84,137 +84,50 @@ public class ME {
         }
         return false;
     }
-    /**
-     * Formar Cadenas con límite de resultados
-     * @return la lista final con los resultados
-     */
-    public ArrayList formarCadenasResultados() {
-        String cadena="";
-        ArrayList<String> soluciones=new ArrayList<>();
-        int i,j;
-        inicializar();
-        try {
-            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
-                if(listaFinal.size()<5){
-                    for(j=0;j<automata.getCaracteresUsados().size();j++){
-                        if(i>j){
-                            if(automata.getCaracteresUsados().get(j)!=null){
-                                if(acepta(automata.getCaracteresUsados().get(j))){
-                                    i=j;
-                                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                                }
-                            }
-                        }
+    public void formarCadenasCyR() {
+        String cadena = "";
+        ArrayList<Character> posiblesLetras = new ArrayList<>();
+        this.inicializar();
+        while (listaFinal.size() <= 20) {
+            posiblesLetras = posiblesLetras(estadoActual);
+            cadena = cadena + posiblesLetras.get(getRandomInt(0, posiblesLetras.size() - 1)).toString();
+            if (cadena.length() <= 15) {
+                if (compruebaCadena(cadena)) {
+                    if (!listaFinal.contains(cadena)) {
+                        listaFinal.add(cadena);
+                    }else{
+                        if(getRandomInt(0,2)==0) continue;
                     }
-                    if(acepta(automata.getCaracteresUsados().get(i))){
-                        cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                    }
-                    if (compruebaCadena(cadena)){
-                        if(!soluciones.contains(cadena)){
-                            soluciones.add(cadena);
-                            if(!listaFinal.contains(cadena)){
-                                listaFinal.add(cadena);
-                            }
-                        }
-                    }
+                    this.inicializar();
+                    cadena = "";
                 }
+            } else {
+                this.inicializar();
+                cadena = "";
+                return;
             }
-            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
-            automata.getCaracteresUsados().remove(0);
-            }catch (Exception ex){}
-        return listaFinal;
+        }
     }
-    /**
-     * Formar Cadenas con límite de resultados y limite de caracteres
-     * @return la lista final con los resultados
-     */
-    public ArrayList formarCadenasCyR() {
-        String cadena="";
-        ArrayList<String> soluciones=new ArrayList<>();
-        int i,j;
-        inicializar();
-        try {
-            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
-                if(listaFinal.size()<5){
-                    for(j=0;j<automata.getCaracteresUsados().size();j++){
-                        if(i>j){
-                            if(automata.getCaracteresUsados().get(j)!=null){
-                                if(acepta(automata.getCaracteresUsados().get(j))){                    
-                                    i=j;
-                                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                                }
-                            }
-                        }
-                    }
-                    if(acepta(automata.getCaracteresUsados().get(i))){
-                        cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                    }
-                    if (compruebaCadena(cadena)){
-                        if(cadena.length()<=3){
-                            if(!soluciones.contains(cadena)){
-                                soluciones.add(cadena);
-                                if(!listaFinal.contains(cadena)){
-                                    listaFinal.add(cadena);
-                                }
-                            }
-                        }
-                        else{
-                            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
-                            automata.getCaracteresUsados().remove(0);
-                            return listaFinal;
-                        }
-                    }
-                }
+
+    public ArrayList<Character> posiblesLetras(int posicion) {
+        Integer posible;
+        ArrayList<Character> posiblesLetras = new ArrayList<>();
+        for (int j = 0; j < automata.getCaracteresUsados().size(); j++) {
+            posible = automata.getMatriz().get(posicion).get(automata.getCaracteresUsados().get(j));
+            if (automata.getEstados().contains(posible)) {
+                posiblesLetras.add(automata.getCaracteresUsados().get(j));
+
             }
-            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
-            automata.getCaracteresUsados().remove(0);
-        } catch (Exception ex){}
-        return listaFinal;
+        }   
+        return posiblesLetras;
     }
-    /**
-     * Formar Cadenas con límite de caracteres
-     * @return la lista final con los resultados
-     */
-    public ArrayList formarCadenasCaracteres() {
-        String cadena="";
-        ArrayList<String> soluciones=new ArrayList<>();
-        int i,j;
-        inicializar();
-        try {
-            for (i=0;i<automata.getCaracteresUsados().size()+1;i++){
-                for(j=0;j<automata.getCaracteresUsados().size();j++){
-                    if(i>j){
-                        if(automata.getCaracteresUsados().get(j)!=null){
-                            if(acepta(automata.getCaracteresUsados().get(j))){                    
-                                i=j;
-                                cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                            }
-                        }
-                    }
-                }
-                if(acepta(automata.getCaracteresUsados().get(i))){
-                    cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-                }
-                if (compruebaCadena(cadena)){
-                    if(cadena.length()<=120){
-                        if(!soluciones.contains(cadena)){
-                            soluciones.add(cadena);
-                            if(!listaFinal.contains(cadena)){
-                                listaFinal.add(cadena);
-                            }
-                        }
-                    }
-                    else{
-                        automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
-                        automata.getCaracteresUsados().remove(0);
-                        return listaFinal;
-                    }
-                }
-            }
-            automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
-            automata.getCaracteresUsados().remove(0);
-        } catch (Exception ex){}
-        return listaFinal;
+
+    public static int getRandomInt(double min, double max) {
+
+        int x = (int) ((Math.random() * ((max - min) + 1)) + min);
+
+        return x;
+
     }
 
 
@@ -238,7 +151,7 @@ public class ME {
         }
             
             for(int i = 0;i<listaFinal.size();i++){
-                outputWriter.write(i+"- \""+listaFinal.get(i)+"\"");
+                outputWriter.write(i+1+"- \""+listaFinal.get(i)+"\"");
                 outputWriter.newLine();
             }
             outputWriter.close();

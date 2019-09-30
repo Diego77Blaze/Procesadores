@@ -93,8 +93,23 @@ public class AFD {
      * Método para establecer los estados finales
      */
     public void establecerQf(){
+        
         estadosFinales.add(3);
         estadosFinales.add(5);
+        
+        /*
+        estadosFinales.add(5);
+        estadosFinales.add(6);
+        estadosFinales.add(7);
+        estadosFinales.add(8);
+        estadosFinales.add(9);
+        estadosFinales.add(12);
+        estadosFinales.add(13);
+        estadosFinales.add(14);
+        estadosFinales.add(15);
+        estadosFinales.add(16);
+        */
+        
     }
     /**
      * Método para inicializar la matriz
@@ -108,6 +123,7 @@ public class AFD {
      * Método para cargar los datos de la matriz 
      */
     public void cargarMatriz(){
+        
         matriz.get(0).put('a', 1);
         matriz.get(0).put('b', 2);
         matriz.get(1).put('b', 2);
@@ -115,6 +131,53 @@ public class AFD {
         matriz.get(3).put('d', 4);
         matriz.get(4).put('e', 5);
         matriz.get(5).put('d', 4);
+        
+        /*
+        this.matriz.get(0).put('a',1);
+        this.matriz.get(1).put('a',2);
+        this.matriz.get(2).put('a',2);
+        this.matriz.get(1).put('b',3);
+        this.matriz.get(2).put('b',3);
+        this.matriz.get(5).put('b',10);
+        this.matriz.get(6).put('b',10);
+        this.matriz.get(7).put('b',10);
+        this.matriz.get(8).put('b',10);
+        this.matriz.get(9).put('b',10);
+        this.matriz.get(12).put('b',10);
+        this.matriz.get(13).put('b',10);
+        this.matriz.get(14).put('b',10);
+        this.matriz.get(15).put('b',10);
+        this.matriz.get(16).put('b',10);
+        this.matriz.get(3).put('c',4);
+        this.matriz.get(4).put('c',4);
+        this.matriz.get(10).put('c',11);
+        this.matriz.get(11).put('c',11);
+        this.matriz.get(3).put('m',6);
+        this.matriz.get(4).put('m',6);
+        this.matriz.get(10).put('m',13);
+        this.matriz.get(11).put('m',13);
+        this.matriz.get(3).put('n',5);
+        this.matriz.get(4).put('n',5);
+        this.matriz.get(10).put('n',12);
+        this.matriz.get(11).put('n',12);
+        this.matriz.get(3).put('o',7);
+        this.matriz.get(4).put('o',7);
+        this.matriz.get(10).put('o',14);
+        this.matriz.get(11).put('o',14);
+        this.matriz.get(3).put('p',9);
+        this.matriz.get(4).put('p',9);
+        this.matriz.get(10).put('p',16);
+        this.matriz.get(11).put('p',16);
+        this.matriz.get(3).put('q',8);
+        this.matriz.get(4).put('q',8);
+        this.matriz.get(10).put('q',15);
+        this.matriz.get(11).put('q',15);
+        */
+        
+
+
+
+        
     }
     /**
      * Método para conseguir el estado que va a continuación del actual
@@ -163,6 +226,16 @@ public class AFD {
     public ArrayList<Character> getCaracteresUsados(){
         return caracteresUsados;
     }
+
+    public List<Integer> getEstados() {
+        return estados;
+    }
+
+    public HashMap<Integer, HashMap<Character, Integer>> getMatriz() {
+        return matriz;
+    }
+    
+    
     
     
     
