@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Main {
 
-    /**
+    /** Main method
      * @param args the command line arguments
      * 
      */
@@ -34,11 +34,11 @@ public class Main {
         
         //Ejercicio 2
         int initialSize = maquinaEstados.getAutomata().getCaracteresUsados().size();
-                for(int i = 0; i<initialSize;i++){
-                    maquinaEstados.formarCadenasCaracteres();
-                    //maquinaEstados.formarCadenasResultados();
-                    //maquinaEstados.formarCadenasCyR();
-                }
+        for(int i = 0; i<initialSize;i++){
+            maquinaEstados.formarCadenasCaracteres();
+            //maquinaEstados.formarCadenasResultados();
+            //maquinaEstados.formarCadenasCyR();
+        }
         maquinaEstados.resultadoEjercicio(cadenas);
             
             

@@ -79,7 +79,7 @@ public class ME {
             if (this.isFinal()) {
                 return true;
             }
-        } catch (Exception e) {
+        }catch (Exception e) {
             return false;
         }
         return false;
@@ -99,7 +99,7 @@ public class ME {
                     for(j=0;j<automata.getCaracteresUsados().size();j++){
                         if(i>j){
                             if(automata.getCaracteresUsados().get(j)!=null){
-                                if(acepta(automata.getCaracteresUsados().get(j))){                    
+                                if(acepta(automata.getCaracteresUsados().get(j))){
                                     i=j;
                                     cadena=cadena + automata.getCaracteresUsados().get(i).toString();
                                 }
@@ -108,7 +108,6 @@ public class ME {
                     }
                     if(acepta(automata.getCaracteresUsados().get(i))){
                         cadena=cadena + automata.getCaracteresUsados().get(i).toString();
-
                     }
                     if (compruebaCadena(cadena)){
                         if(!soluciones.contains(cadena)){
@@ -122,7 +121,7 @@ public class ME {
             }
             automata.getCaracteresUsados().add(automata.getCaracteresUsados().get(0));
             automata.getCaracteresUsados().remove(0);
-            } catch (Exception ex){}
+            }catch (Exception ex){}
         return listaFinal;
     }
     /**
@@ -197,7 +196,7 @@ public class ME {
                     cadena=cadena + automata.getCaracteresUsados().get(i).toString();
                 }
                 if (compruebaCadena(cadena)){
-                    if(cadena.length()<=6){
+                    if(cadena.length()<=120){
                         if(!soluciones.contains(cadena)){
                             soluciones.add(cadena);
                             if(!listaFinal.contains(cadena)){
@@ -242,7 +241,6 @@ public class ME {
                 outputWriter.write(i+"- \""+listaFinal.get(i)+"\"");
                 outputWriter.newLine();
             }
-            System.out.println(listaFinal);
             outputWriter.close();
        }catch(IOException e){}
     }
