@@ -89,29 +89,30 @@ public class ME {
     }
     
     /**
-     * Generador de cadenas válidas para la ER de la matriz, e introduce los resultados en la lista a imprimir
-     * @param cadActual 
-     * @param estActual 
+     * Generador de cadenas válidas para la ER de la matriz, e introduce los resultados en la lista a imprimir, por limite de resultados y limite de caracteres.
+     * @param cadActual cadena actual
+     * @param estActual estado actual
      */
-    public void generadorCadenas(String cadActual, int estActual){
+    public void generadorCadenasCyR(String cadActual, int estActual){
         int limResultados = 100;
-        int limCaracteres = 15;
+        int limCaracteres = 10;
         
-        if(listaFinal.size()<limResultados && cadActual.length()<=limCaracteres){
+        if(cadActual.length()<=limCaracteres){
             int siguiente = automata.getSiguienteEstado(estActual, cadActual.charAt(cadActual.length()-1));
             Set <Character> letras = automata.getMatriz().get(siguiente).keySet();
             List<Character> lista = new ArrayList<>();
             lista.addAll(letras);
             if(!letras.isEmpty()){
                 for(int i = 0;i<lista.size();i++){
-                    generadorCadenas(cadActual+lista.get(i), siguiente);
+                    generadorCadenasCyR(cadActual+lista.get(i), siguiente);
                 }
             }
-            if(automata.isFinal(siguiente)){
+            if(automata.isFinal(siguiente) && listaFinal.size()<limResultados){
                 listaFinal.add(cadActual);
             }
         }    
     }
+
 
     /**
      * Sacar resultados programa a un fichero.txt

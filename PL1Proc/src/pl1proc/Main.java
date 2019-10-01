@@ -24,9 +24,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ME maquinaEstados = new ME();
-        ArrayList<String> cadenas = new ArrayList<>();
         
         //Ejercicio 1
+        
+        ArrayList<String> cadenas = new ArrayList<>();
         System.out.println("¿Cuantas cadenas deseas probar?");
         Integer numeroCadenas = Integer.parseInt(br.readLine());
         for (int i = 0; i<numeroCadenas;i++){
@@ -39,7 +40,9 @@ public class Main {
         List<Character> lista = new ArrayList<>();
         lista.addAll(inicial);
         for(int i2 = 0; i2<lista.size();i2++){
-            maquinaEstados.generadorCadenas(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
+            maquinaEstados.generadorCadenasCyR(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
+            //maquinaEstados.generadorCadenasCaracteres(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
+            //maquinaEstados.generadorCadenasResultados(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
         }
         
         //Impresión de Resultados
