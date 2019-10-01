@@ -7,6 +7,8 @@ package pl1proc;
 
 import java.util.ArrayList;
 import java.io.*;
+import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -29,7 +31,6 @@ public class ME {
         automata.establecerQf();
         automata.inicializacionMatriz();
         automata.cargarMatriz();
-        automata.setCaracteresUsados();
     }
     /**
      * Se establece el estado actual
@@ -37,6 +38,7 @@ public class ME {
     public void inicializar(){
         estadoActual = automata.getEstadoInicial();
     }
+    
     /**
      * Se comprueba si el caracter se acepta según la matriz de estados
      * @param caracter caracter que se comprueba en la matriz
@@ -45,15 +47,16 @@ public class ME {
      */
     public boolean acepta(Character caracter) throws Exception{
         Integer estadotmp = automata.getSiguienteEstado(estadoActual, caracter);
-        if(estadotmp==-1){
+        if(estadotmp==null){
             return false;
         }
-        if (estadotmp!=null){
+        else{
             estadoActual = estadotmp;
             return true;
         }
-        else throw new Exception("No existe un estado más.");
+        //else throw new Exception("No existe un estado más.");
     }
+    
     /**
      * Comprobación de si el caracter es el de un estado final
      * @return si el estado actual es final o no
@@ -84,52 +87,31 @@ public class ME {
         }
         return false;
     }
-    public void formarCadenasCyR() {
-        String cadena = "";
-        ArrayList<Character> posiblesLetras = new ArrayList<>();
-        this.inicializar();
-        while (listaFinal.size() <= 20) {
-            posiblesLetras = posiblesLetras(estadoActual);
-            cadena = cadena + posiblesLetras.get(getRandomInt(0, posiblesLetras.size() - 1)).toString();
-            if (cadena.length() <= 15) {
-                if (compruebaCadena(cadena)) {
-                    if (!listaFinal.contains(cadena)) {
-                        listaFinal.add(cadena);
-                    }else{
-                        if(getRandomInt(0,2)==0) continue;
-                    }
-                    this.inicializar();
-                    cadena = "";
+    
+    /**
+     * Generador de cadenas válidas para la ER de la matriz, e introduce los resultados en la lista a imprimir
+     * @param cadActual 
+     * @param estActual 
+     */
+    public void generadorCadenas(String cadActual, int estActual){
+        int limResultados = 100;
+        int limCaracteres = 15;
+        
+        if(listaFinal.size()<limResultados && cadActual.length()<=limCaracteres){
+            int siguiente = automata.getSiguienteEstado(estActual, cadActual.charAt(cadActual.length()-1));
+            Set <Character> letras = automata.getMatriz().get(siguiente).keySet();
+            List<Character> lista = new ArrayList<>();
+            lista.addAll(letras);
+            if(!letras.isEmpty()){
+                for(int i = 0;i<lista.size();i++){
+                    generadorCadenas(cadActual+lista.get(i), siguiente);
                 }
-            } else {
-                this.inicializar();
-                cadena = "";
-                return;
             }
-        }
-    }
-
-    public ArrayList<Character> posiblesLetras(int posicion) {
-        Integer posible;
-        ArrayList<Character> posiblesLetras = new ArrayList<>();
-        for (int j = 0; j < automata.getCaracteresUsados().size(); j++) {
-            posible = automata.getMatriz().get(posicion).get(automata.getCaracteresUsados().get(j));
-            if (automata.getEstados().contains(posible)) {
-                posiblesLetras.add(automata.getCaracteresUsados().get(j));
-
+            if(automata.isFinal(siguiente)){
+                listaFinal.add(cadActual);
             }
-        }   
-        return posiblesLetras;
+        }    
     }
-
-    public static int getRandomInt(double min, double max) {
-
-        int x = (int) ((Math.random() * ((max - min) + 1)) + min);
-
-        return x;
-
-    }
-
 
     /**
      * Sacar resultados programa a un fichero.txt
@@ -157,8 +139,7 @@ public class ME {
             outputWriter.close();
        }catch(IOException e){}
     }
-
-    
+   
     /**
      * Conseguir el automata
      * @return automata
@@ -168,5 +149,3 @@ public class ME {
     }
     
 }
-
-//Te puede pedir para un numero maximo de caracteres o para unas cifras limitadas

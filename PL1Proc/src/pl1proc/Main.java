@@ -8,6 +8,8 @@ package pl1proc;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -33,12 +35,16 @@ public class Main {
         }
         
         //Ejercicio 2
+        Set <Character> inicial = maquinaEstados.getAutomata().getMatriz().get(maquinaEstados.getAutomata().getEstadoInicial()).keySet();
+        List<Character> lista = new ArrayList<>();
+        lista.addAll(inicial);
+        for(int i2 = 0; i2<lista.size();i2++){
+            maquinaEstados.generadorCadenas(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
+        }
         
-        
-        maquinaEstados.formarCadenasCyR();
-        
+        //Impresión de Resultados
         maquinaEstados.resultadoEjercicio(cadenas);
-            
+       
             
 
     }

@@ -78,7 +78,7 @@ public class AFD {
      * Método para cargar los estados posibles
      */
     public void cargarEstados(){
-        for (int i=0;i<6;i++){
+        for (int i=0;i<17;i++){
             estados.add(i);
         }
     }
@@ -93,11 +93,13 @@ public class AFD {
      * Método para establecer los estados finales
      */
     public void establecerQf(){
-        
+        /*
         estadosFinales.add(3);
         estadosFinales.add(5);
+        */
         
-        /*
+        
+        
         estadosFinales.add(5);
         estadosFinales.add(6);
         estadosFinales.add(7);
@@ -108,7 +110,7 @@ public class AFD {
         estadosFinales.add(14);
         estadosFinales.add(15);
         estadosFinales.add(16);
-        */
+        
         
     }
     /**
@@ -123,7 +125,7 @@ public class AFD {
      * Método para cargar los datos de la matriz 
      */
     public void cargarMatriz(){
-        
+        /*
         matriz.get(0).put('a', 1);
         matriz.get(0).put('b', 2);
         matriz.get(1).put('b', 2);
@@ -131,8 +133,10 @@ public class AFD {
         matriz.get(3).put('d', 4);
         matriz.get(4).put('e', 5);
         matriz.get(5).put('d', 4);
+        */
         
-        /*
+        
+        
         this.matriz.get(0).put('a',1);
         this.matriz.get(1).put('a',2);
         this.matriz.get(2).put('a',2);
@@ -172,7 +176,7 @@ public class AFD {
         this.matriz.get(4).put('q',8);
         this.matriz.get(10).put('q',15);
         this.matriz.get(11).put('q',15);
-        */
+        
         
 
 
@@ -189,7 +193,7 @@ public class AFD {
         if(matriz.get(estado).get(caracter)!=null){
             return matriz.get(estado).get(caracter);
         }
-        else return -1;
+        else return null;
     }
     /**
      * Método para ver si un estado es final
@@ -205,26 +209,6 @@ public class AFD {
      */
     public Integer getEstadoInicial(){
         return estadoInicial;
-    }
-    /**
-     * Método para conseguir los caracteres del alfabeto que se pueden usar según la ER
-     */
-    public void setCaracteresUsados(){
-        Collection<Character> hashSet = new HashSet<>();
-        for (int i = 0;i<estados.size();i++){
-            hashSet.addAll(matriz.get(i).keySet());           
-        }
-        Iterator<Character> iterador = hashSet.iterator();
-        while(iterador.hasNext()){
-            caracteresUsados.add(iterador.next());
-        }
-    }
-    /**
-     * Método para conseguir una lista de los caracteres usados
-     * @return la lista de caracteres usados
-     */
-    public ArrayList<Character> getCaracteresUsados(){
-        return caracteresUsados;
     }
 
     public List<Integer> getEstados() {
