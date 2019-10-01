@@ -95,7 +95,7 @@ public class ME {
      */
     public void generadorCadenasCyR(String cadActual, int estActual){
         int limResultados = 100;
-        int limCaracteres = 10;
+        int limCaracteres = 15;
         
         if(cadActual.length()<=limCaracteres){
             int siguiente = automata.getSiguienteEstado(estActual, cadActual.charAt(cadActual.length()-1));

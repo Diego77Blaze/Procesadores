@@ -41,8 +41,6 @@ public class Main {
         lista.addAll(inicial);
         for(int i2 = 0; i2<lista.size();i2++){
             maquinaEstados.generadorCadenasCyR(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
-            //maquinaEstados.generadorCadenasCaracteres(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
-            //maquinaEstados.generadorCadenasResultados(lista.get(i2).toString(),maquinaEstados.getAutomata().getEstadoInicial());
         }
         
         //Impresión de Resultados

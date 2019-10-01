@@ -78,7 +78,7 @@ public class AFD {
      * Método para cargar los estados posibles
      */
     public void cargarEstados(){
-        for (int i=0;i<6;i++){
+        for (int i=0;i<17;i++){
             estados.add(i);
         }
     }
@@ -93,13 +93,7 @@ public class AFD {
      * Método para establecer los estados finales
      */
     public void establecerQf(){
-        
-        estadosFinales.add(3);
-        estadosFinales.add(5);
-        
-        
-        
-        /*
+
         estadosFinales.add(5);
         estadosFinales.add(6);
         estadosFinales.add(7);
@@ -110,7 +104,6 @@ public class AFD {
         estadosFinales.add(14);
         estadosFinales.add(15);
         estadosFinales.add(16);
-        */
         
         
         
@@ -126,17 +119,8 @@ public class AFD {
     /**
      * Método para cargar los datos de la matriz 
      */
-    public void cargarMatriz(){
-        
-        matriz.get(0).put('a', 1);
-        matriz.get(0).put('b', 2);
-        matriz.get(1).put('b', 2);
-        matriz.get(2).put('c', 3);
-        matriz.get(3).put('d', 4);
-        matriz.get(4).put('e', 5);
-        matriz.get(5).put('d', 4);
-        
-        /*
+    public void cargarMatriz(){        
+
         this.matriz.get(0).put('a',1);
         this.matriz.get(1).put('a',2);
         this.matriz.get(2).put('a',2);
@@ -175,14 +159,7 @@ public class AFD {
         this.matriz.get(3).put('q',8);
         this.matriz.get(4).put('q',8);
         this.matriz.get(10).put('q',15);
-        this.matriz.get(11).put('q',15);        
-        */
-
-        
-        
-
-
-
+        this.matriz.get(11).put('q',15);
         
     }
     /**
@@ -197,6 +174,7 @@ public class AFD {
         }
         else return null;
     }
+    
     /**
      * Método para ver si un estado es final
      * @param estado estado a comprobar
@@ -205,6 +183,7 @@ public class AFD {
     public boolean isFinal(Integer estado){
         return estadosFinales.contains(estado);
     }
+    
     /**
      * Método para conseguir el estado inicial
      * @return 
@@ -212,11 +191,19 @@ public class AFD {
     public Integer getEstadoInicial(){
         return estadoInicial;
     }
-
+    
+    /**
+     * Método para conseguir una lista los estados
+     * @return lista de estados
+     */
     public List<Integer> getEstados() {
         return estados;
     }
 
+    /**
+     * Método para conseguir la matriz
+     * @return  matriz
+     */
     public HashMap<Integer, HashMap<Character, Integer>> getMatriz() {
         return matriz;
     }
