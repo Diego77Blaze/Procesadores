@@ -113,7 +113,6 @@ public class ME {
         }    
     }
 
-
     /**
      * Sacar resultados programa a un fichero.txt
      * @param cadenas cadenas a probar en la ER
