@@ -9,8 +9,8 @@ expr:	expr ('*'|'/') expr
     |   OPERACION '('(expr(','expr)*)?')'
     |   VARIABLE
     ;
+OPERACION: 'cos'|'sen'|'tg';
 NEWLINE : [\r\n]+ ;
 INT     : [0-9]+ ;
-OPERACION: 'cos'|'sen'|'tg';
 VARIABLE: [a-zA-Z]+;
 WS: ' '+ ->skip;

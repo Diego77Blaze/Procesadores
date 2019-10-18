@@ -17,7 +17,7 @@ public class ExprParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, NEWLINE=13, INT=14, OPERACION=15, VARIABLE=16, 
+		T__9=10, T__10=11, T__11=12, OPERACION=13, NEWLINE=14, INT=15, VARIABLE=16, 
 		WS=17;
 	public static final int
 		RULE_prog = 0, RULE_asignacion = 1, RULE_expr = 2;
@@ -31,7 +31,7 @@ public class ExprParser extends Parser {
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, "NEWLINE", "INT", "OPERACION", "VARIABLE", "WS"
+		null, "OPERACION", "NEWLINE", "INT", "VARIABLE", "WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -115,7 +115,7 @@ public class ExprParser extends Parser {
 			setState(14);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << INT) | (1L << OPERACION) | (1L << VARIABLE))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << OPERACION) | (1L << INT) | (1L << VARIABLE))) != 0)) {
 				{
 				{
 				setState(8);
@@ -251,7 +251,7 @@ public class ExprParser extends Parser {
 				setState(37);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << INT) | (1L << OPERACION) | (1L << VARIABLE))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__9) | (1L << OPERACION) | (1L << INT) | (1L << VARIABLE))) != 0)) {
 					{
 					setState(29);
 					expr(0);
@@ -405,11 +405,11 @@ public class ExprParser extends Parser {
 		"\16\4&\13\4\5\4(\n\4\3\4\3\4\5\4,\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
 		"\3\4\7\4\67\n\4\f\4\16\4:\13\4\3\4\2\3\6\5\2\4\6\2\5\3\2\4\5\3\2\6\7\3"+
 		"\2\b\13\2B\2\20\3\2\2\2\4\23\3\2\2\2\6+\3\2\2\2\b\13\5\6\4\2\t\13\5\4"+
-		"\3\2\n\b\3\2\2\2\n\t\3\2\2\2\13\f\3\2\2\2\f\r\7\17\2\2\r\17\3\2\2\2\16"+
+		"\3\2\n\b\3\2\2\2\n\t\3\2\2\2\13\f\3\2\2\2\f\r\7\20\2\2\r\17\3\2\2\2\16"+
 		"\n\3\2\2\2\17\22\3\2\2\2\20\16\3\2\2\2\20\21\3\2\2\2\21\3\3\2\2\2\22\20"+
 		"\3\2\2\2\23\24\7\22\2\2\24\25\7\3\2\2\25\26\5\6\4\2\26\5\3\2\2\2\27\30"+
-		"\b\4\1\2\30,\7\20\2\2\31\32\7\f\2\2\32\33\5\6\4\2\33\34\7\r\2\2\34,\3"+
-		"\2\2\2\35\36\7\21\2\2\36\'\7\f\2\2\37$\5\6\4\2 !\7\16\2\2!#\5\6\4\2\""+
+		"\b\4\1\2\30,\7\21\2\2\31\32\7\f\2\2\32\33\5\6\4\2\33\34\7\r\2\2\34,\3"+
+		"\2\2\2\35\36\7\17\2\2\36\'\7\f\2\2\37$\5\6\4\2 !\7\16\2\2!#\5\6\4\2\""+
 		" \3\2\2\2#&\3\2\2\2$\"\3\2\2\2$%\3\2\2\2%(\3\2\2\2&$\3\2\2\2\'\37\3\2"+
 		"\2\2\'(\3\2\2\2()\3\2\2\2),\7\r\2\2*,\7\22\2\2+\27\3\2\2\2+\31\3\2\2\2"+
 		"+\35\3\2\2\2+*\3\2\2\2,8\3\2\2\2-.\f\t\2\2./\t\2\2\2/\67\5\6\4\n\60\61"+
