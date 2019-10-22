@@ -15,13 +15,13 @@ asignacion: ID ':=' expr
 
 //reservadas
 INCLUDE: 'include';
-include: INCLUDE (LETRA+DIGITO*)*;
+include: INCLUDE LETRA+ ('.'(LETRA+|'*'));
 FUNCTION: 'function';
 TIPONUMERO: 'numero';
 TIPOCADENA: 'cadena';
 TIPOVOID: 'void';
 tipo: TIPONUMERO|TIPOCADENA;
-ID: (LETRA+DIGITO*)*;
+ID: (LETRA+DIGITO*)+;
 BEGIN: 'begin';
 END: 'end';
 WHILE: 'while';
