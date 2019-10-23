@@ -3,30 +3,36 @@ grammar gramaticapei;
 //axioma
 prog:   (include NEWLINE+)*
     |   (asignacion NEWLINE+)*
-    |   (crearfuncionvoid NEWLINE+)*
-    |   (crearfuncionnumero NEWLINE+)*
-    |   (crearfuncioncadena NEWLINE+)*
+    |   (crearfuncion NEWLINE+)*
+    |   (expr NEWLINE+)*
+    |   (comentarios NEWLINE+)*
+    |   NEWLINE+
     ;
-
 //asignacion
-asignacion: ID ':=' expr
-          | tipo ID ':=' expr
-          ;
+asignacion: tipo? ID ':=' expr comentarios? ';';
+variable: tipo? ID ':=' expr;
 
 //reservadas
 INCLUDE: 'include';
 include: INCLUDE LETRA+ ('.'(LETRA+|'*'));
-FUNCTION: 'function';
+FUNCTION: 'function'; 
 TIPONUMERO: 'numero';
 TIPOCADENA: 'cadena';
 TIPOVOID: 'void';
-tipo: TIPONUMERO|TIPOCADENA;
-ID: (LETRA+DIGITO*)+;
+tipo: TIPONUMERO|TIPOCADENA|TIPOVOID;
+ID: LETRA+;
 BEGIN: 'begin';
 END: 'end';
 WHILE: 'while';
-while: WHILE PI exprlog PD NEWLINE+ funcwhile;
+while: WHILE PI exprlog PD (comentarios?NEWLINE)+ func;
+IF: 'if';
+if: IF PI exprlog PD NEWLINE+ func;
 DEVOLVER: 'devolver';
+FOR:'for';
+for: FOR PI(variable|ID) (';' exprlog) (';' variable|ID (('+' '+')|('-' '-'))) PD (comentarios?NEWLINE)+ func;
+
+condicionales: nombrecond PI exprlog PD (comentarios?NEWLINE)+ func;
+nombrecond: IF|ELSE|IFELSE;
 
 //cadenas de caracteres
 LETRA: [a-zA-Z];
@@ -47,27 +53,22 @@ PI: '(';
 PD: ')';
 
 //creacion funciones
-crearfuncionvoid: FUNCTION ID PI (tipo? ID? (',' tipo ID)?)* PD ':' TIPOVOID NEWLINE+  funcvoid;
-crearfuncionnumero: FUNCTION ID PI(tipo? ID?(',' tipo ID)?)* PD ':' TIPONUMERO NEWLINE+ funcnum;
-crearfuncioncadena: FUNCTION ID PI(tipo? ID?(',' tipo ID)?)* PD ':' TIPOCADENA NEWLINE+ funccad;
+crearfuncion: FUNCTION ID PI (tipo? ID? (',' tipo ID)?)* PD ':' tipo (comentarios?NEWLINE)+  func;
 
 //codigo
 codigo: (asignacion|llamarfuncion|while);
 
 //interior funciones
-funcvoid: BEGIN NEWLINE+ (codigo NEWLINE)+ END;
-funcnum: BEGIN NEWLINE+ (codigo NEWLINE)+ DEVOLVER (ID|numero) END;
-funccad:BEGIN NEWLINE+ (codigo NEWLINE)+ DEVOLVER (ID|string) END;
-funcwhile: BEGIN NEWLINE+ (codigo NEWLINE)+ END;
+func: BEGIN NEWLINE+ (codigo NEWLINE)+ END NEWLINE+;
 
 
 //llamada funciones
-llamarfuncion: ID PI (expr(',' expr)*)? PD; 
+llamarfuncion: ((ID PI (expr(',' expr)*)? PD ';'NEWLINE+)| for | while | condicionales); 
 
 //expresiones
 expr:   expr ('*'|'/') expr
     |   expr ('+'|'-') expr
-    |   exprlog
+    |   expr ('>'|'<'|'<='|'>='|'=='|'!=') expr
     |   llamarfuncion
     |   ID
     |   string
@@ -77,10 +78,16 @@ expr:   expr ('*'|'/') expr
 exprlog: expr ('>'|'<'|'<='|'>='|'=='|'!=') expr;
 
 //comentarios
+comentarios:    COMENTARIO_LINEA
+    |   COMENTARIO_BLOQUE1
+    |   COMENTARIO_BLOQUE2
+    |   COMENTARIO_LINEA2
+    ;
 COMENTARIO_LINEA: '//' .*? '\n'->skip;
 COMENTARIO_LINEA2:   '/*' .*? '*/' ->skip;
 COMENTARIO_BLOQUE1: '/***' .*? '***/'->skip;
 COMENTARIO_BLOQUE2: '/**' .*? '**/' ->skip;
+
 
 //Espacios en blanco, tabuladores
 WS: [ \t\n\r]+ ->skip;
