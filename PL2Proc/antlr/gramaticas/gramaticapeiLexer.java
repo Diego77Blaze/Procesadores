@@ -1,4 +1,4 @@
-// Generated from d:\ProgrammingStuff\Github\Procesadores\PL2Proc\antlr\gramaticas\gramaticapei.g4 by ANTLR 4.7.1
+// Generated from .\gramaticapei.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class gramaticapeiLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -32,33 +32,43 @@ public class gramaticapeiLexer extends Lexer {
 		"DEFAULT_MODE"
 	};
 
-	public static final String[] ruleNames = {
-		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
-		"T__9", "T__10", "T__11", "T__12", "T__13", "T__14", "T__15", "T__16", 
-		"T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
-		"T__25", "INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", "TIPOVOID", 
-		"BEGIN", "END", "PORCENTAJE", "DEVOLVER", "WHILE", "FOR", "IF", "ELSE", 
-		"IFELSE", "CADENA", "ESC", "NEWLINE", "ID", "DIGITO", "PI", "PD", "COMENTARIO_LINEA", 
-		"COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2", "WS"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
+			"T__9", "T__10", "T__11", "T__12", "T__13", "T__14", "T__15", "T__16", 
+			"T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
+			"T__25", "INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", "TIPOVOID", 
+			"BEGIN", "END", "PORCENTAJE", "DEVOLVER", "WHILE", "FOR", "IF", "ELSE", 
+			"IFELSE", "CADENA", "ESC", "NEWLINE", "ID", "DIGITO", "PI", "PD", "COMENTARIO_LINEA", 
+			"COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2", "WS"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "':='", "';'", "'.'", "'+'", "'-'", "'\u00C3\u00A1'", "'\u00C3\uFFFD'", 
-		"'\u00C3\u00A9'", "'\u00C3\u2030'", "'\u00C3\u00AD'", "'\u00C3\u00B3'", 
-		"'\u00C3\u201C'", "'\u00C3\u00BA'", "'\u00C3\u0161'", "'\u00C3\u00B1'", 
-		"'\u00C3\u2018'", "','", "':'", "'*'", "'/'", "'>'", "'<'", "'<='", "'>='", 
-		"'=='", "'!='", "'include'", "'function'", "'numero'", "'cadena'", "'void'", 
-		"'begin'", "'end'", "'%'", "'devolver'", "'while'", "'for'", "'if'", "'else'", 
-		null, null, null, null, null, "'('", "')'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, "INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", "TIPOVOID", 
-		"BEGIN", "END", "PORCENTAJE", "DEVOLVER", "WHILE", "FOR", "IF", "ELSE", 
-		"IFELSE", "CADENA", "NEWLINE", "ID", "DIGITO", "PI", "PD", "COMENTARIO_LINEA", 
-		"COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2", "WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "':='", "';'", "'.'", "'+'", "'-'", "'\u00C3\u00A1'", "'\u00C3\uFFFD'", 
+			"'\u00C3\u00A9'", "'\u00C3\u2030'", "'\u00C3\u00AD'", "'\u00C3\u00B3'", 
+			"'\u00C3\u201C'", "'\u00C3\u00BA'", "'\u00C3\u0161'", "'\u00C3\u00B1'", 
+			"'\u00C3\u2018'", "','", "':'", "'*'", "'/'", "'>'", "'<'", "'<='", "'>='", 
+			"'=='", "'!='", "'include'", "'function'", "'numero'", "'cadena'", "'void'", 
+			"'begin'", "'end'", "'%'", "'devolver'", "'while'", "'for'", "'if'", 
+			"'else'", null, null, null, null, null, "'('", "')'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, null, null, null, null, null, null, null, null, null, null, null, 
+			null, null, null, null, null, null, null, null, null, null, null, null, 
+			null, null, null, "INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", 
+			"TIPOVOID", "BEGIN", "END", "PORCENTAJE", "DEVOLVER", "WHILE", "FOR", 
+			"IF", "ELSE", "IFELSE", "CADENA", "NEWLINE", "ID", "DIGITO", "PI", "PD", 
+			"COMENTARIO_LINEA", "COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2", 
+			"WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
