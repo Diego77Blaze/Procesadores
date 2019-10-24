@@ -9,7 +9,7 @@ variable: tipo? ID ':=' expr;
 INCLUDE: 'include';
 include: (INCLUDE ID ('.' ID)* ';' NEWLINE*)*;
 //reservadas
-FUNCTION: 'function'; 
+FUNCTION: 'function';
 TIPONUMERO: 'numero';
 TIPOCADENA: 'cadena';
 TIPOVOID: 'void';
@@ -96,5 +96,3 @@ COMENTARIO_BLOQUE2: '/**' .*? '**/' ->skip;
 
 //Espacios en blanco, tabuladores
 WS: ([\t\n\r]+|' '+) ->skip;
-
-//antlr gramaticapei.g4 -no-listener -visitor
