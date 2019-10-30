@@ -16,6 +16,9 @@ IF: 'if';
 ELSE: 'else';
 IFELSE: IF ' ' ELSE;
 CONDICIONES: IF | ELSE | IFELSE;
+DOSPUNTOS: ':';
+PUNTO: '.';
+COMA: ',';
 PI: '(';
 PD: ')';
 PC: ';';
@@ -29,13 +32,11 @@ MENORQUE: '<';
 MAYORQUE: '>';
 IGUALQUE: '==';
 DISTINTOQUE: '!=';
-DOSPUNTOS: ':';
-PUNTO: '.';
-COMA: ',';
+
 
 
 //Data structures
-NEWLINE : [\r\n\t]+ ; 
+NEWLINE : [\r\n\t]+ ->skip; 
 CADENA: '"' (ESC|.)*? '"';
 fragment ESC: '\\' [btnr"\\];
 ID: [a-zA-Z]+;
