@@ -1,4 +1,4 @@
-// Generated from .\GramaticacompilerParser.g4 by ANTLR 4.7.2
+// Generated from GramaticacompilerParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -156,16 +156,6 @@ public interface GramaticacompilerParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNombrefuncion(GramaticacompilerParser.NombrefuncionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GramaticacompilerParser#nomlib}.
-	 * @param ctx the parse tree
-	 */
-	void enterNomlib(GramaticacompilerParser.NomlibContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GramaticacompilerParser#nomlib}.
-	 * @param ctx the parse tree
-	 */
-	void exitNomlib(GramaticacompilerParser.NomlibContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramaticacompilerParser#cabecerafuncion}.
 	 * @param ctx the parse tree

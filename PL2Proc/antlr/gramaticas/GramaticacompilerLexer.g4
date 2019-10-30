@@ -1,4 +1,4 @@
-lexer grammar GramaticacompilerLexer; 
+lexer grammar GramaticacompilerLexer;
 
 
 //palabras reservadas

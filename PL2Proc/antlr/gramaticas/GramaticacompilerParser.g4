@@ -3,7 +3,7 @@ parser grammar GramaticacompilerParser;
 options{
     tokenVocab = GramaticacompilerLexer;
     language = Java;
-} 
+}
 
 
 prog: (NEWLINE* (include|expr|asignacion|crearfuncion|comentarios) NEWLINE)+ ;  
