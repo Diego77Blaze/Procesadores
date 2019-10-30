@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Fibonacci", //Nombre de debug, da igual cual se ponga
+            "input": "PL2-fibonacci.prog", //Ruta relativa al archivo a leer
+            "grammar": "GramaticacompilerParser.g4", //Ruta relativa al archivo de gramática
+            "startRule": "prog", //Nombre de la regla principal de la gramática
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}
