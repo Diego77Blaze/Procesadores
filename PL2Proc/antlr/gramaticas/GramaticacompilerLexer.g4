@@ -3,6 +3,7 @@ lexer grammar GramaticacompilerLexer;
 
 //palabras reservadas
 INCLUDE: 'include';
+MAIN: 'main';
 FUNCTION: 'function';
 TIPONUMERO: 'numero';
 TIPOCADENA: 'cadena';
@@ -16,6 +17,9 @@ IF: 'if';
 ELSE: 'else';
 IFELSE: IF ' ' ELSE;
 CONDICIONES: IF | ELSE | IFELSE;
+
+
+//Puntuacion
 DOSPUNTOS: ':';
 PUNTO: '.';
 COMA: ',';
@@ -32,12 +36,13 @@ MENORQUE: '<';
 MAYORQUE: '>';
 IGUALQUE: '==';
 DISTINTOQUE: '!=';
-
+ADD1: '++';
+SUBSTRACT1: '--';
 
 
 //Data structures
 NEWLINE : [\r\n\t]+ ->skip; 
-CADENA: '"' (ESC|.)*? '"';
+CADENA: '"' (ESC|.)*? '"' {setText(getText().substring(1, getText().length()-1).replaceAll("\\\\(.)", "$1"));};
 fragment ESC: '\\' [btnr"\\];
 ID: [a-zA-Z]+;
 DIGITO: [0-9]+;

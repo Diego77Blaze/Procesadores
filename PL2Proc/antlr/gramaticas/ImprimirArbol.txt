@@ -1,0 +1,407 @@
+/prog
+/prog/include
+/prog/include/keywordinclude
+/prog/include/keywordinclude/keywordinclude: include
+/prog/include/nomlib
+/prog/include/nomlib/nomlib: printflib
+/prog/include/puntocoma
+/prog/include/puntocoma/puntocoma: ;
+/prog/crearfuncion
+/prog/crearfuncion/cabecerafuncion
+/prog/crearfuncion/cabecerafuncion/keywordfunc
+/prog/crearfuncion/cabecerafuncion/keywordfunc/keywordfunc: function
+/prog/crearfuncion/cabecerafuncion/keywordmain
+/prog/crearfuncion/cabecerafuncion/keywordmain/keywordmain: main
+/prog/crearfuncion/cabecerafuncion/abrirparentesis
+/prog/crearfuncion/cabecerafuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/cabecerafuncion/dospuntos
+/prog/crearfuncion/cabecerafuncion/dospuntos/dospuntos: :
+/prog/crearfuncion/cabecerafuncion/tiporetorno
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo/tipo: void
+/prog/crearfuncion/func
+/prog/crearfuncion/func/keywordbegin
+/prog/crearfuncion/func/keywordbegin/keywordbegin: begin
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: numero
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: umbral
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero/entero: 100
+/prog/crearfuncion/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion/nombrefuncion: imprimir
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/cadena
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/cadena/cadena: Iniciando el cálculo de Fibonacci
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: cadena
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: valores
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/nombrefuncion/nombrefuncion: fibonacci
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: umbral
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/expr/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion/nombrefuncion: imprimir
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr/nombrevariable/nombrevariable: valores
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/opsuma
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr/cadena
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/expr/cadena/cadena: nFin de fibonacci.
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/keywordend
+/prog/crearfuncion/func/keywordend/keywordend: end
+/prog/crearfuncion
+/prog/crearfuncion/cabecerafuncion
+/prog/crearfuncion/cabecerafuncion/keywordfunc
+/prog/crearfuncion/cabecerafuncion/keywordfunc/keywordfunc: function
+/prog/crearfuncion/cabecerafuncion/nombrefuncion
+/prog/crearfuncion/cabecerafuncion/nombrefuncion/nombrefuncion: fibonacci
+/prog/crearfuncion/cabecerafuncion/abrirparentesis
+/prog/crearfuncion/cabecerafuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/cabecerafuncion/tipo
+/prog/crearfuncion/cabecerafuncion/tipo/tipo: numero
+/prog/crearfuncion/cabecerafuncion/expr
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable/nombrevariable: umbral
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/cabecerafuncion/dospuntos
+/prog/crearfuncion/cabecerafuncion/dospuntos/dospuntos: :
+/prog/crearfuncion/cabecerafuncion/tiporetorno
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo/tipo: cadena
+/prog/crearfuncion/func
+/prog/crearfuncion/func/keywordbegin
+/prog/crearfuncion/func/keywordbegin/keywordbegin: begin
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: numero
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: numeroFibonacciInicio
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero/entero: 0
+/prog/crearfuncion/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: numero
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: numeroFibonacciSegundo
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero/entero: 1
+/prog/crearfuncion/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: numero
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: ResultadoFibonacci
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero
+/prog/crearfuncion/func/codigo/asignacion/expr/numeros/entero/entero: 0
+/prog/crearfuncion/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/asignacion/tipo
+/prog/crearfuncion/func/codigo/asignacion/tipo/tipo: cadena
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/nombrevariable/nombrevariable: temporal
+/prog/crearfuncion/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/cadena
+/prog/crearfuncion/func/codigo/asignacion/expr/cadena/cadena: Serie Fibonacci: 
+/prog/crearfuncion/func/codigo/asignacion/expr/opsuma
+/prog/crearfuncion/func/codigo/asignacion/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/asignacion/expr/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/nombrefuncion/nombrefuncion: aCadena
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: numeroFibonacciInicio
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/opsuma
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/cadena
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/cadena/cadena: , 
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/opsuma
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/nombrefuncion/nombrefuncion: aCadena
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: numeroFibonacciSegundo
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/asignacion/expr/expr/expr/expr/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/keywordwhile
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/keywordwhile/keywordwhile: while
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/abrirparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr/nombrevariable/nombrevariable: ResultadoFibonacci
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/oplog
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/oplog/oplog: <
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/exprlog/expr/nombrevariable/nombrevariable: umbral
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/cerrarparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/keywordbegin
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/keywordbegin/keywordbegin: begin
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable/nombrevariable: ResultadoFibonacci
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable/nombrevariable: numeroFibonacciInicio
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/opsuma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable/nombrevariable: numeroFibonacciSegundo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable/nombrevariable: temporal
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/nombrevariable/nombrevariable: temporal
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/opsuma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/cadena
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/cadena/cadena: , 
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/opsuma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/opsuma/opsuma: +
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/nombrefuncion/nombrefuncion: aCadena
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: ResultadoFibonacci
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/expr/expr/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable/nombrevariable: numeroFibonacciInicio
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/nombrevariable/nombrevariable: numeroFibonacciSegundo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/nombrevariable/nombrevariable: numeroFibonacciSegundo
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/asignador/asignador: :=
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/expr/nombrevariable/nombrevariable: ResultadoFibonacci
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/codigo/asignacion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/keywordend
+/prog/crearfuncion/func/codigo/llamarfuncion/funcionwhile/func/keywordend/keywordend: end
+/prog/crearfuncion/func/devolver
+/prog/crearfuncion/func/devolver/keywordreturn
+/prog/crearfuncion/func/devolver/keywordreturn/keywordreturn: devolver
+/prog/crearfuncion/func/devolver/abrirparentesis
+/prog/crearfuncion/func/devolver/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/devolver/expr
+/prog/crearfuncion/func/devolver/expr/nombrevariable
+/prog/crearfuncion/func/devolver/expr/nombrevariable/nombrevariable: temporal
+/prog/crearfuncion/func/devolver/cerrarparentesis
+/prog/crearfuncion/func/devolver/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/devolver/puntocoma
+/prog/crearfuncion/func/devolver/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/keywordend
+/prog/crearfuncion/func/keywordend/keywordend: end
+/prog/crearfuncion
+/prog/crearfuncion/cabecerafuncion
+/prog/crearfuncion/cabecerafuncion/keywordfunc
+/prog/crearfuncion/cabecerafuncion/keywordfunc/keywordfunc: function
+/prog/crearfuncion/cabecerafuncion/nombrefuncion
+/prog/crearfuncion/cabecerafuncion/nombrefuncion/nombrefuncion: imprimir
+/prog/crearfuncion/cabecerafuncion/abrirparentesis
+/prog/crearfuncion/cabecerafuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/cabecerafuncion/tipo
+/prog/crearfuncion/cabecerafuncion/tipo/tipo: cadena
+/prog/crearfuncion/cabecerafuncion/expr
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable/nombrevariable: texto
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/cabecerafuncion/dospuntos
+/prog/crearfuncion/cabecerafuncion/dospuntos/dospuntos: :
+/prog/crearfuncion/cabecerafuncion/tiporetorno
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo/tipo: void
+/prog/crearfuncion/func
+/prog/crearfuncion/func/keywordbegin
+/prog/crearfuncion/func/keywordbegin/keywordbegin: begin
+/prog/crearfuncion/func/codigo
+/prog/crearfuncion/func/codigo/llamarfuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/codigo/llamarfuncion/nombrefuncion/nombrefuncion: printf
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/codigo/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: texto
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/codigo/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma
+/prog/crearfuncion/func/codigo/llamarfuncion/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/keywordend
+/prog/crearfuncion/func/keywordend/keywordend: end
+/prog/crearfuncion
+/prog/crearfuncion/cabecerafuncion
+/prog/crearfuncion/cabecerafuncion/keywordfunc
+/prog/crearfuncion/cabecerafuncion/keywordfunc/keywordfunc: function
+/prog/crearfuncion/cabecerafuncion/nombrefuncion
+/prog/crearfuncion/cabecerafuncion/nombrefuncion/nombrefuncion: aCadena
+/prog/crearfuncion/cabecerafuncion/abrirparentesis
+/prog/crearfuncion/cabecerafuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/cabecerafuncion/tipo
+/prog/crearfuncion/cabecerafuncion/tipo/tipo: numero
+/prog/crearfuncion/cabecerafuncion/expr
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable
+/prog/crearfuncion/cabecerafuncion/expr/nombrevariable/nombrevariable: x
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis
+/prog/crearfuncion/cabecerafuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/cabecerafuncion/dospuntos
+/prog/crearfuncion/cabecerafuncion/dospuntos/dospuntos: :
+/prog/crearfuncion/cabecerafuncion/tiporetorno
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo
+/prog/crearfuncion/cabecerafuncion/tiporetorno/tipo/tipo: cadena
+/prog/crearfuncion/func
+/prog/crearfuncion/func/keywordbegin
+/prog/crearfuncion/func/keywordbegin/keywordbegin: begin
+/prog/crearfuncion/func/devolver
+/prog/crearfuncion/func/devolver/keywordreturn
+/prog/crearfuncion/func/devolver/keywordreturn/keywordreturn: devolver
+/prog/crearfuncion/func/devolver/abrirparentesis
+/prog/crearfuncion/func/devolver/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/devolver/expr
+/prog/crearfuncion/func/devolver/expr/llamarfuncion
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/nombrefuncion
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/nombrefuncion/nombrefuncion: sprintf
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/abrirparentesis
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/abrirparentesis/abrirparentesis: (
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr/cadena
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr/cadena/cadena: %d
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/coma
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/coma/coma: ,
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr/nombrevariable
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/parametros/expr/nombrevariable/nombrevariable: x
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/cerrarparentesis
+/prog/crearfuncion/func/devolver/expr/llamarfuncion/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/devolver/cerrarparentesis
+/prog/crearfuncion/func/devolver/cerrarparentesis/cerrarparentesis: )
+/prog/crearfuncion/func/devolver/puntocoma
+/prog/crearfuncion/func/devolver/puntocoma/puntocoma: ;
+/prog/crearfuncion/func/keywordend
+/prog/crearfuncion/func/keywordend/keywordend: end

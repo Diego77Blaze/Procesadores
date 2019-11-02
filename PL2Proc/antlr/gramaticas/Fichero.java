@@ -1,13 +1,12 @@
 import java.util.*;
+import java.io.Serializable;
 
-public class Fichero {
+
+public class Fichero implements Serializable{
     private static Fichero instancia;
-    private List<String> tramosrama;
+    private List<String> solucion;
 
-    //Nombres de los campos
-    //List<String> nombreCampos;
-
-    //Dato temporal a estudiar
+    //Dato temporal
     private ArrayList<String> datosActuales;
 
     public static Fichero getInstancia(){
@@ -18,14 +17,16 @@ public class Fichero {
     }
 
     public Fichero(){
-        this.tramosrama = new ArrayList<String>();
+        this.solucion = new ArrayList<String>();
         this.datosActuales = new ArrayList<String>();
     }
 
     public void introducirDatoActual(String datoActual){
-        ArrayList<String> elementosFichero = (ArrayList) tramosrama;
+        ArrayList<String> elementosFichero = new ArrayList<String>();
+        elementosFichero.addAll(solucion);
         this.datosActuales.add(datoActual);
         elementosFichero.add(generarString(datosActuales));
+        solucion = elementosFichero;
     }
 
     private String generarString(ArrayList<String> elementosActuales){
@@ -35,21 +36,30 @@ public class Fichero {
         }
         return elementosconcatenados;
     }
+    
+    public List<String> getSolucion(){
+        return solucion;
+    }
 
-    public void eliminarUltimoElementoAñadido(){
+    public void setSolucion(List<String> solucion){ 
+        this.solucion = solucion;
+    }
+
+    public String getUltimoElemento()
+    {
+        String ultimoDato = "";
+        if(datosActuales.size() != 0)
+        {
+            ultimoDato = datosActuales.get(datosActuales.size()-1);
+        }
+        return ultimoDato;
+    }
+
+    public void eliminarUltimoElemento(){
         if(datosActuales.size() != 0){
             datosActuales.remove(datosActuales.size()-1);
         }
     }
-
-    public List<String> getTramosrama() {
-        return tramosrama;
-    }
-
-    public void setTramosrama(List<String> tramosrama) {
-        this.tramosrama = tramosrama;
-    }
-
     
 
 }
