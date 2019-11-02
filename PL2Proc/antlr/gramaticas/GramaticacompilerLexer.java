@@ -1,4 +1,4 @@
-// Generated from .\GramaticacompilerLexer.g4 by ANTLR 4.7.2
+// Generated from GramaticacompilerLexer.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -18,9 +18,9 @@ public class GramaticacompilerLexer extends Lexer {
 	public static final int
 		INCLUDE=1, FUNCTION=2, TIPONUMERO=3, TIPOCADENA=4, TIPOVOID=5, BEGIN=6, 
 		END=7, DEVOLVER=8, WHILE=9, FOR=10, IF=11, ELSE=12, IFELSE=13, CONDICIONES=14, 
-		PI=15, PD=16, PC=17, ADD=18, MINUS=19, PRODUCT=20, DIVISION=21, ASIGNACION=22, 
-		PORCENTAJE=23, MENORQUE=24, MAYORQUE=25, IGUALQUE=26, DISTINTOQUE=27, 
-		DOSPUNTOS=28, PUNTO=29, COMA=30, NEWLINE=31, CADENA=32, ID=33, DIGITO=34, 
+		DOSPUNTOS=15, PUNTO=16, COMA=17, PI=18, PD=19, PC=20, ADD=21, MINUS=22, 
+		PRODUCT=23, DIVISION=24, ASIGNACION=25, PORCENTAJE=26, MENORQUE=27, MAYORQUE=28, 
+		IGUALQUE=29, DISTINTOQUE=30, NEWLINE=31, CADENA=32, ID=33, DIGITO=34, 
 		WS=35, COMENTARIO_LINEA=36, COMENTARIO_LINEA2=37, COMENTARIO_BLOQUE1=38, 
 		COMENTARIO_BLOQUE2=39;
 	public static String[] channelNames = {
@@ -35,9 +35,9 @@ public class GramaticacompilerLexer extends Lexer {
 		return new String[] {
 			"INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", "TIPOVOID", "BEGIN", 
 			"END", "DEVOLVER", "WHILE", "FOR", "IF", "ELSE", "IFELSE", "CONDICIONES", 
-			"PI", "PD", "PC", "ADD", "MINUS", "PRODUCT", "DIVISION", "ASIGNACION", 
-			"PORCENTAJE", "MENORQUE", "MAYORQUE", "IGUALQUE", "DISTINTOQUE", "DOSPUNTOS", 
-			"PUNTO", "COMA", "NEWLINE", "CADENA", "ESC", "ID", "DIGITO", "WS", "COMENTARIO_LINEA", 
+			"DOSPUNTOS", "PUNTO", "COMA", "PI", "PD", "PC", "ADD", "MINUS", "PRODUCT", 
+			"DIVISION", "ASIGNACION", "PORCENTAJE", "MENORQUE", "MAYORQUE", "IGUALQUE", 
+			"DISTINTOQUE", "NEWLINE", "CADENA", "ESC", "ID", "DIGITO", "WS", "COMENTARIO_LINEA", 
 			"COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2"
 		};
 	}
@@ -47,8 +47,8 @@ public class GramaticacompilerLexer extends Lexer {
 		return new String[] {
 			null, "'include'", "'function'", "'numero'", "'cadena'", "'void'", "'begin'", 
 			"'end'", "'devolver'", "'while'", "'for'", "'if'", "'else'", null, null, 
-			"'('", "')'", "';'", "'+'", "'-'", "'*'", "'/'", "':='", "'%'", "'<'", 
-			"'>'", "'=='", "'!='", "':'", "'.'", "','"
+			"':'", "'.'", "','", "'('", "')'", "';'", "'+'", "'-'", "'*'", "'/'", 
+			"':='", "'%'", "'<'", "'>'", "'=='", "'!='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -56,9 +56,9 @@ public class GramaticacompilerLexer extends Lexer {
 		return new String[] {
 			null, "INCLUDE", "FUNCTION", "TIPONUMERO", "TIPOCADENA", "TIPOVOID", 
 			"BEGIN", "END", "DEVOLVER", "WHILE", "FOR", "IF", "ELSE", "IFELSE", "CONDICIONES", 
-			"PI", "PD", "PC", "ADD", "MINUS", "PRODUCT", "DIVISION", "ASIGNACION", 
-			"PORCENTAJE", "MENORQUE", "MAYORQUE", "IGUALQUE", "DISTINTOQUE", "DOSPUNTOS", 
-			"PUNTO", "COMA", "NEWLINE", "CADENA", "ID", "DIGITO", "WS", "COMENTARIO_LINEA", 
+			"DOSPUNTOS", "PUNTO", "COMA", "PI", "PD", "PC", "ADD", "MINUS", "PRODUCT", 
+			"DIVISION", "ASIGNACION", "PORCENTAJE", "MENORQUE", "MAYORQUE", "IGUALQUE", 
+			"DISTINTOQUE", "NEWLINE", "CADENA", "ID", "DIGITO", "WS", "COMENTARIO_LINEA", 
 			"COMENTARIO_LINEA2", "COMENTARIO_BLOQUE1", "COMENTARIO_BLOQUE2"
 		};
 	}
@@ -132,9 +132,9 @@ public class GramaticacompilerLexer extends Lexer {
 		"\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\n"+
 		"\3\n\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\r\3\r\3\r\3\r\3"+
 		"\r\3\16\3\16\3\16\3\16\3\17\3\17\3\17\5\17\u00a4\n\17\3\20\3\20\3\21\3"+
-		"\21\3\22\3\22\3\23\3\23\3\24\3\24\3\25\3\25\3\26\3\26\3\27\3\27\3\27\3"+
-		"\30\3\30\3\31\3\31\3\32\3\32\3\33\3\33\3\33\3\34\3\34\3\34\3\35\3\35\3"+
-		"\36\3\36\3\37\3\37\3 \6 \u00ca\n \r \16 \u00cb\3 \3 \3!\3!\3!\7!\u00d3"+
+		"\21\3\22\3\22\3\23\3\23\3\24\3\24\3\25\3\25\3\26\3\26\3\27\3\27\3\30\3"+
+		"\30\3\31\3\31\3\32\3\32\3\32\3\33\3\33\3\34\3\34\3\35\3\35\3\36\3\36\3"+
+		"\36\3\37\3\37\3\37\3 \6 \u00ca\n \r \16 \u00cb\3 \3 \3!\3!\3!\7!\u00d3"+
 		"\n!\f!\16!\u00d6\13!\3!\3!\3\"\3\"\3\"\3#\6#\u00de\n#\r#\16#\u00df\3$"+
 		"\6$\u00e3\n$\r$\16$\u00e4\3%\6%\u00e8\n%\r%\16%\u00e9\3%\6%\u00ed\n%\r"+
 		"%\16%\u00ee\5%\u00f1\n%\3%\3%\3&\3&\3&\3&\7&\u00f9\n&\f&\16&\u00fc\13"+
@@ -156,8 +156,8 @@ public class GramaticacompilerLexer extends Lexer {
 		"\3\2\2\2\25\u0090\3\2\2\2\27\u0094\3\2\2\2\31\u0097\3\2\2\2\33\u009c\3"+
 		"\2\2\2\35\u00a3\3\2\2\2\37\u00a5\3\2\2\2!\u00a7\3\2\2\2#\u00a9\3\2\2\2"+
 		"%\u00ab\3\2\2\2\'\u00ad\3\2\2\2)\u00af\3\2\2\2+\u00b1\3\2\2\2-\u00b3\3"+
-		"\2\2\2/\u00b6\3\2\2\2\61\u00b8\3\2\2\2\63\u00ba\3\2\2\2\65\u00bc\3\2\2"+
-		"\2\67\u00bf\3\2\2\29\u00c2\3\2\2\2;\u00c4\3\2\2\2=\u00c6\3\2\2\2?\u00c9"+
+		"\2\2\2/\u00b5\3\2\2\2\61\u00b7\3\2\2\2\63\u00b9\3\2\2\2\65\u00bc\3\2\2"+
+		"\2\67\u00be\3\2\2\29\u00c0\3\2\2\2;\u00c2\3\2\2\2=\u00c5\3\2\2\2?\u00c9"+
 		"\3\2\2\2A\u00cf\3\2\2\2C\u00d9\3\2\2\2E\u00dd\3\2\2\2G\u00e2\3\2\2\2I"+
 		"\u00f0\3\2\2\2K\u00f4\3\2\2\2M\u0101\3\2\2\2O\u010f\3\2\2\2Q\u0121\3\2"+
 		"\2\2ST\7k\2\2TU\7p\2\2UV\7e\2\2VW\7n\2\2WX\7w\2\2XY\7f\2\2YZ\7g\2\2Z\4"+
@@ -176,16 +176,16 @@ public class GramaticacompilerLexer extends Lexer {
 		"\u009b\7g\2\2\u009b\32\3\2\2\2\u009c\u009d\5\27\f\2\u009d\u009e\7\"\2"+
 		"\2\u009e\u009f\5\31\r\2\u009f\34\3\2\2\2\u00a0\u00a4\5\27\f\2\u00a1\u00a4"+
 		"\5\31\r\2\u00a2\u00a4\5\33\16\2\u00a3\u00a0\3\2\2\2\u00a3\u00a1\3\2\2"+
-		"\2\u00a3\u00a2\3\2\2\2\u00a4\36\3\2\2\2\u00a5\u00a6\7*\2\2\u00a6 \3\2"+
-		"\2\2\u00a7\u00a8\7+\2\2\u00a8\"\3\2\2\2\u00a9\u00aa\7=\2\2\u00aa$\3\2"+
-		"\2\2\u00ab\u00ac\7-\2\2\u00ac&\3\2\2\2\u00ad\u00ae\7/\2\2\u00ae(\3\2\2"+
-		"\2\u00af\u00b0\7,\2\2\u00b0*\3\2\2\2\u00b1\u00b2\7\61\2\2\u00b2,\3\2\2"+
-		"\2\u00b3\u00b4\7<\2\2\u00b4\u00b5\7?\2\2\u00b5.\3\2\2\2\u00b6\u00b7\7"+
-		"\'\2\2\u00b7\60\3\2\2\2\u00b8\u00b9\7>\2\2\u00b9\62\3\2\2\2\u00ba\u00bb"+
-		"\7@\2\2\u00bb\64\3\2\2\2\u00bc\u00bd\7?\2\2\u00bd\u00be\7?\2\2\u00be\66"+
-		"\3\2\2\2\u00bf\u00c0\7#\2\2\u00c0\u00c1\7?\2\2\u00c18\3\2\2\2\u00c2\u00c3"+
-		"\7<\2\2\u00c3:\3\2\2\2\u00c4\u00c5\7\60\2\2\u00c5<\3\2\2\2\u00c6\u00c7"+
-		"\7.\2\2\u00c7>\3\2\2\2\u00c8\u00ca\t\2\2\2\u00c9\u00c8\3\2\2\2\u00ca\u00cb"+
+		"\2\u00a3\u00a2\3\2\2\2\u00a4\36\3\2\2\2\u00a5\u00a6\7<\2\2\u00a6 \3\2"+
+		"\2\2\u00a7\u00a8\7\60\2\2\u00a8\"\3\2\2\2\u00a9\u00aa\7.\2\2\u00aa$\3"+
+		"\2\2\2\u00ab\u00ac\7*\2\2\u00ac&\3\2\2\2\u00ad\u00ae\7+\2\2\u00ae(\3\2"+
+		"\2\2\u00af\u00b0\7=\2\2\u00b0*\3\2\2\2\u00b1\u00b2\7-\2\2\u00b2,\3\2\2"+
+		"\2\u00b3\u00b4\7/\2\2\u00b4.\3\2\2\2\u00b5\u00b6\7,\2\2\u00b6\60\3\2\2"+
+		"\2\u00b7\u00b8\7\61\2\2\u00b8\62\3\2\2\2\u00b9\u00ba\7<\2\2\u00ba\u00bb"+
+		"\7?\2\2\u00bb\64\3\2\2\2\u00bc\u00bd\7\'\2\2\u00bd\66\3\2\2\2\u00be\u00bf"+
+		"\7>\2\2\u00bf8\3\2\2\2\u00c0\u00c1\7@\2\2\u00c1:\3\2\2\2\u00c2\u00c3\7"+
+		"?\2\2\u00c3\u00c4\7?\2\2\u00c4<\3\2\2\2\u00c5\u00c6\7#\2\2\u00c6\u00c7"+
+		"\7?\2\2\u00c7>\3\2\2\2\u00c8\u00ca\t\2\2\2\u00c9\u00c8\3\2\2\2\u00ca\u00cb"+
 		"\3\2\2\2\u00cb\u00c9\3\2\2\2\u00cb\u00cc\3\2\2\2\u00cc\u00cd\3\2\2\2\u00cd"+
 		"\u00ce\b \2\2\u00ce@\3\2\2\2\u00cf\u00d4\7$\2\2\u00d0\u00d3\5C\"\2\u00d1"+
 		"\u00d3\13\2\2\2\u00d2\u00d0\3\2\2\2\u00d2\u00d1\3\2\2\2\u00d3\u00d6\3"+
