@@ -2,21 +2,21 @@ import java.util.*;
 import java.io.Serializable;
 
 
-public class Fichero implements Serializable{
-    private static Fichero instancia;
+public class TablaSimbolos implements Serializable{
+    private static TablaSimbolos instancia;
     private List<String> solucion;
 
     //Dato temporal
     private ArrayList<String> datosActuales;
 
-    public static Fichero getInstancia(){
+    public static TablaSimbolos getInstancia(){
         if(instancia == null){
-            instancia = new Fichero();
+            instancia = new TablaSimbolos();
         }
         return instancia;
     }
 
-    public Fichero(){
+    public TablaSimbolos(){
         this.solucion = new ArrayList<String>();
         this.datosActuales = new ArrayList<String>();
     }

@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import java.util.*;
 
 public class ListenerBasico extends GramaticacompilerParserBaseListener{
-    Fichero fichero = Fichero.getInstancia();
+    TablaSimbolos fichero = TablaSimbolos.getInstancia();
 
 	@Override public void enterEveryRule(ParserRuleContext ctx){
 		fichero.introducirDatoActual(GramaticacompilerParser.ruleNames[ctx.getRuleIndex()]);

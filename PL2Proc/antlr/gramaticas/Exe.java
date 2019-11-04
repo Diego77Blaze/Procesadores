@@ -6,7 +6,7 @@ import org.antlr.v4.runtime.tree.*;
 public class Exe{
     public static void main(String[] args) throws Exception {
         String ficheroentrada = "PL2-fibonacci.prog";
-        Fichero fichero = Fichero.getInstancia();
+        TablaSimbolos fichero = TablaSimbolos.getInstancia();
 
         InputStream is = System.in;
         if(ficheroentrada!=null){
