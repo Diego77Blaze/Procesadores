@@ -18,7 +18,7 @@ condicionales: keywordcond (abrirparentesis exprlog cerrarparentesis)? keywordth
 numeros: entero | flotante;
 devolver: keywordreturn abrirparentesis (expr|llamarfuncion)? cerrarparentesis puntocoma;
 codigo: (asignacion|llamarfuncion|funcionwhile|funcionfor|funcionswitch|condicionales);
-func: keywordbegin* (codigo )* devolver? keywordend*;
+func: keywordbegin* (codigo )+ devolver? keywordend*;
 cabecerafuncion: keywordfunc (nombrefuncion|keywordmain) abrirparentesis (tipo expr (coma tipo expr)*)? cerrarparentesis dospuntos tiporetorno ;
 tiporetorno: tipo;
 crearfuncion: cabecerafuncion func;
