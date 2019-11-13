@@ -12,17 +12,19 @@ asignacion: tipo? nombrevariable asignador expr puntocoma?;
 variable: tipo? nombrevariable asignador expr;
 funcionwhile: keywordwhile abrirparentesis exprlog cerrarparentesis func;
 funcionfor: keywordfor abrirparentesis (variable|nombrevariable) (puntocoma exprlog) (puntocoma variable|nombrevariable (add1|substract1)) cerrarparentesis func;
-condicionales: keywordcond abrirparentesis exprlog cerrarparentesis func;
+funcionswitch: keywordswitch abrirparentesis expr cerrarparentesis cuerposwitch;
+cuerposwitch: (keywordcase expr dospuntos codigo+ keywordbreak? puntocoma)+ (keyworddefault dospuntos expr+ keywordbreak)?;
+condicionales: keywordcond (abrirparentesis exprlog cerrarparentesis)? keywordthen? func keywordendif;
 numeros: entero | flotante;
 devolver: keywordreturn abrirparentesis (expr|llamarfuncion)? cerrarparentesis puntocoma;
-codigo: (asignacion|llamarfuncion|funcionwhile|funcionfor);
-func: keywordbegin (codigo )* devolver? keywordend;
+codigo: (asignacion|llamarfuncion|funcionwhile|funcionfor|funcionswitch|condicionales);
+func: keywordbegin* (codigo )* devolver? keywordend*;
 cabecerafuncion: keywordfunc (nombrefuncion|keywordmain) abrirparentesis (tipo expr (coma tipo expr)*)? cerrarparentesis dospuntos tiporetorno ;
 tiporetorno: tipo;
 crearfuncion: cabecerafuncion func;
 llamarfuncion: (nombrefuncion abrirparentesis parametros cerrarparentesis puntocoma? | funcionfor | funcionwhile);
 parametros: expr (coma expr)*;
-expr:   expr (opdiv|opmult) expr
+expr:   expr (opdiv|opmult) expr 
     |   expr (opsuma|opresta) expr
     |   llamarfuncion
     |   nombrevariable 
@@ -30,7 +32,7 @@ expr:   expr (opdiv|opmult) expr
     |   numeros
     |   abrirparentesis expr cerrarparentesis
     ;
-exprlog: expr oplog expr;  
+exprlog: expr oplog expr | expr;  
 
 
 tipo: TIPONUMERO|TIPOCADENA|TIPOVOID;
@@ -68,3 +70,10 @@ keywordfunc: FUNCTION;
 keywordreturn: DEVOLVER;
 keywordbegin: BEGIN;
 keywordend: END;
+keywordswitch: SWITCH;
+keywordcase: CASE;
+keywordbreak: BREAK;
+keyworddefault: DEFAULT;
+keywordendswitch: ENDSWITCH;
+keywordthen: THEN;
+keywordendif: ENDIF;  

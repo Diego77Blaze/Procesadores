@@ -1,4 +1,4 @@
-// Generated from .\GramaticacompilerParser.g4 by ANTLR 4.7.2
+// Generated from GramaticacompilerParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -66,6 +66,26 @@ public interface GramaticacompilerParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFuncionfor(GramaticacompilerParser.FuncionforContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#funcionswitch}.
+	 * @param ctx the parse tree
+	 */
+	void enterFuncionswitch(GramaticacompilerParser.FuncionswitchContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#funcionswitch}.
+	 * @param ctx the parse tree
+	 */
+	void exitFuncionswitch(GramaticacompilerParser.FuncionswitchContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#cuerposwitch}.
+	 * @param ctx the parse tree
+	 */
+	void enterCuerposwitch(GramaticacompilerParser.CuerposwitchContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#cuerposwitch}.
+	 * @param ctx the parse tree
+	 */
+	void exitCuerposwitch(GramaticacompilerParser.CuerposwitchContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link GramaticacompilerParser#condicionales}.
 	 * @param ctx the parse tree
@@ -486,4 +506,74 @@ public interface GramaticacompilerParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitKeywordend(GramaticacompilerParser.KeywordendContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordswitch}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordswitch(GramaticacompilerParser.KeywordswitchContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordswitch}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordswitch(GramaticacompilerParser.KeywordswitchContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordcase}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordcase(GramaticacompilerParser.KeywordcaseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordcase}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordcase(GramaticacompilerParser.KeywordcaseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordbreak}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordbreak(GramaticacompilerParser.KeywordbreakContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordbreak}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordbreak(GramaticacompilerParser.KeywordbreakContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keyworddefault}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeyworddefault(GramaticacompilerParser.KeyworddefaultContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keyworddefault}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeyworddefault(GramaticacompilerParser.KeyworddefaultContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordendswitch}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordendswitch(GramaticacompilerParser.KeywordendswitchContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordendswitch}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordendswitch(GramaticacompilerParser.KeywordendswitchContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordthen}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordthen(GramaticacompilerParser.KeywordthenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordthen}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordthen(GramaticacompilerParser.KeywordthenContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link GramaticacompilerParser#keywordendif}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywordendif(GramaticacompilerParser.KeywordendifContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GramaticacompilerParser#keywordendif}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywordendif(GramaticacompilerParser.KeywordendifContext ctx);
 }

@@ -8,15 +8,22 @@ FUNCTION: 'function';
 TIPONUMERO: 'numero';
 TIPOCADENA: 'cadena';
 TIPOVOID: 'void';
+THEN:'then';
+IF: 'if';
+ELSE: 'else';
+CONDICIONES: IF|ELSE;
+ENDIF:'endif';
 BEGIN: 'begin';
 END: 'end';
 DEVOLVER: 'devolver';
 WHILE: 'while';
 FOR:'for';
-IF: 'if';
-ELSE: 'else';
-IFELSE: IF ' ' ELSE;
-CONDICIONES: IF | ELSE | IFELSE;
+SWITCH:'switch';
+CASE: 'case';
+BREAK: 'break';
+DEFAULT:'default';
+ENDSWITCH:'endswitch';
+
 
 
 //Puntuacion
@@ -26,6 +33,7 @@ COMA: ',';
 PI: '(';
 PD: ')';
 PC: ';';
+BB:'_';
 ADD: '+';
 MINUS: '-';
 PRODUCT: '*';
@@ -44,7 +52,7 @@ SUBSTRACT1: '--';
 NEWLINE : [\r\n\t]+ ->skip; 
 CADENA: '"' (ESC|.)*? '"' {setText(getText().substring(1, getText().length()-1).replaceAll("\\\\(.)", "$1"));};
 fragment ESC: '\\' [btnr"\\];
-ID: [a-zA-Z]+;
+ID: [a-zA-Z0-9_]+;
 DIGITO: [0-9]+;
 WS: ([\t\n\r]+|' '+) ->skip;
 COMENTARIO_LINEA: '//' .*? '\n' ->skip;

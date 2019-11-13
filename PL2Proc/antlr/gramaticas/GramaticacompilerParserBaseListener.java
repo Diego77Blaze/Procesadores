@@ -1,4 +1,4 @@
-// Generated from .\GramaticacompilerParser.g4 by ANTLR 4.7.2
+// Generated from GramaticacompilerParser.g4 by ANTLR 4.7.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -82,6 +82,30 @@ public class GramaticacompilerParserBaseListener implements GramaticacompilerPar
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFuncionfor(GramaticacompilerParser.FuncionforContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFuncionswitch(GramaticacompilerParser.FuncionswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFuncionswitch(GramaticacompilerParser.FuncionswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCuerposwitch(GramaticacompilerParser.CuerposwitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCuerposwitch(GramaticacompilerParser.CuerposwitchContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -586,6 +610,90 @@ public class GramaticacompilerParserBaseListener implements GramaticacompilerPar
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitKeywordend(GramaticacompilerParser.KeywordendContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordswitch(GramaticacompilerParser.KeywordswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordswitch(GramaticacompilerParser.KeywordswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordcase(GramaticacompilerParser.KeywordcaseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordcase(GramaticacompilerParser.KeywordcaseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordbreak(GramaticacompilerParser.KeywordbreakContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordbreak(GramaticacompilerParser.KeywordbreakContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeyworddefault(GramaticacompilerParser.KeyworddefaultContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeyworddefault(GramaticacompilerParser.KeyworddefaultContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordendswitch(GramaticacompilerParser.KeywordendswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordendswitch(GramaticacompilerParser.KeywordendswitchContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordthen(GramaticacompilerParser.KeywordthenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordthen(GramaticacompilerParser.KeywordthenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywordendif(GramaticacompilerParser.KeywordendifContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywordendif(GramaticacompilerParser.KeywordendifContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
